@@ -7,6 +7,7 @@ module.exports = {
     description: `Tu salud protegida`,
     image: `./src/images/logo.jpg`,
     siteUrl: `https://www.yourdomain.tld`,
+    twitterUsername: ``,
   },
   // "gatsby-plugin-google-gtag"
   plugins: [
