@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 
+import Logo from "../images/logo.jpg";
+
 const navigation = [
   { name: "Nosotros", href: "/" },
   { name: "Planes", href: "/" },
@@ -21,11 +23,7 @@ export const Header = () => {
           <div className="flex lg:flex-1">
             <a href="http://www.arsgma.com/" className="-m-1.5 p-1.5">
               <span className="sr-only">ARS GMA</span>
-              <img
-                alt=""
-                src="http://www.arsgma.com/img/logogma.gif"
-                className="h-8 w-auto"
-              />
+              <img alt="" src={Logo} className="h-8 w-auto" />
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -78,11 +76,7 @@ export const Header = () => {
             <div className="flex items-center justify-between">
               <a href="http://www.arsgma.com/" className="-m-1.5 p-1.5">
                 <span className="sr-only">ARS GMA</span>
-                <img
-                  alt=""
-                  src="http://www.arsgma.com/img/logogma.gif"
-                  className="h-8 w-auto"
-                />
+                <img alt="" src={Logo} className="h-8 w-auto" />
               </a>
               <button
                 type="button"

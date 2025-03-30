@@ -1,5 +1,7 @@
 import React from "react";
 
+import Logo from "../images/logo.jpg";
+
 export const Footer = () => {
   return (
     <footer className="bg-white dark:bg-gray-900">
@@ -8,7 +10,7 @@ export const Footer = () => {
           <div className="mb-6 md:mb-0">
             <a href="http://www.arsgma.com/" className="flex items-center">
               <img
-                src="http://www.arsgma.com/img/logogma.gif"
+                src={Logo}
                 className="h-8 me-3"
                 alt="ARS GMS logo"
               />
