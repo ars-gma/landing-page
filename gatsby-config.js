@@ -6,7 +6,7 @@ module.exports = {
     title: `ARS GMA`,
     description: `Tu salud protegida`,
     image: `./src/images/logo.jpg`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `http://www.arsgma.com`,
     twitterUsername: ``,
   },
   // "gatsby-plugin-google-gtag"
@@ -17,7 +17,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/logo.jpg",
       },
     },
     "gatsby-plugin-sharp",
