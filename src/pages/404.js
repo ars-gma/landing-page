@@ -18,12 +18,15 @@ const NotFoundPage = () => {
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
-              href="/"
+              href="/#home"
               className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Volver al inicio
             </a>
-            <a href="/" className="text-sm font-semibold text-gray-900">
+            <a
+              href="/contactanos"
+              className="text-sm font-semibold text-gray-900"
+            >
               Contactenos <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
@@ -35,4 +38,6 @@ const NotFoundPage = () => {
 
 export default NotFoundPage;
 
-export const Head = () => <Seo title="ARS GMA | No encontrada" />;
+export const Head = () => (
+  <Seo title="ARS GM A- Tu salud protegida | No encontrada" />
+);

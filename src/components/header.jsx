@@ -4,10 +4,10 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import Logo from "../images/logo.jpg";
 
 const navigation = [
-  { name: "Nosotros", href: "/" },
-  { name: "Planes", href: "/" },
+  { name: "Prestadoras", href: "/prestadoras" },
+  { name: "Planes", href: "/#plans" },
   { name: "Noticias", href: "/" },
-  { name: "Contactanos", href: "/" },
+  { name: "Contactanos", href: "/contactanos" },
 ];
 
 export const Header = () => {
@@ -15,13 +15,13 @@ export const Header = () => {
 
   return (
     <div className="bg-white">
-      <header className="absolute inset-x-0 top-0 z-50">
+      <header className="absolute md:fixed md:bg-white md:border-b inset-x-0 top-0 z-50">
         <nav
           aria-label="Global"
           className="flex items-center justify-between p-6 lg:px-8"
         >
           <div className="flex lg:flex-1">
-            <a href="http://www.arsgma.com/" className="-m-1.5 p-1.5">
+            <a href="/#home" className="-m-1.5 p-1.5">
               <span className="sr-only">ARS GMA</span>
               <img alt="" src={Logo} className="h-8 w-auto" />
             </a>
@@ -74,7 +74,7 @@ export const Header = () => {
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <a href="http://www.arsgma.com/" className="-m-1.5 p-1.5">
+              <a href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">ARS GMA</span>
                 <img alt="" src={Logo} className="h-8 w-auto" />
               </a>

@@ -3,8 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `ARS GMA`,
-    description: `Tu salud protegida`,
+    title: `ARS GMA - Tu salud protegida`,
+    description: `ARS GMA - Tu salud protegida`,
     image: `./src/images/logo.jpg`,
     siteUrl: `http://www.arsgma.com`,
     twitterUsername: ``,
