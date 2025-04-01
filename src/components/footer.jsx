@@ -47,7 +47,7 @@ export const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="w-screen md:w-auto">
+            <div className="w-xs md:w-auto">
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 Contactanos
               </h2>
