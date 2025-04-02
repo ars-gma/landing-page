@@ -1,6 +1,6 @@
 import React from "react";
 
-import Logo from "../images/logo.jpg";
+import Logo from "../images/logo.png";
 
 export const Footer = () => {
   return (
@@ -9,7 +9,7 @@ export const Footer = () => {
         <div className="md:flex md:justify-between md:py-8">
           <div className="mb-6 md:mb-0">
             <a href="/#home" className="flex items-center">
-              <img src={Logo} className="h-8 me-3" alt="ARS GMS logo" />
+              <img src={Logo} className="h-12 me-3" alt="ARS GMS logo" />
             </a>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -90,7 +90,7 @@ export const Footer = () => {
                       />
                     </svg>
 
-                    <a href="mailto:" className="hover:underline">
+                    <a href="mailto:correo@arsgma.com?subject=ARS GMA" className="hover:underline">
                       correo@arsgma.com
                     </a>
                   </div>
@@ -118,7 +118,7 @@ export const Footer = () => {
                     </svg>
 
                     <a
-                      href="https://www.google.com/maps"
+                      href="https://www.google.com/maps/place/ARS+GMA/data=!4m2!3m1!1s0x0:0x69a11520c913303c?sa=X&ved=1t:2428&ictx=111"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:underline"

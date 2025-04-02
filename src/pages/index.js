@@ -1,6 +1,8 @@
 import * as React from "react";
 import { SEO as Seo } from "../components/seo";
 import { Layout } from "../components/layout";
+import { classNames } from "../utils/helpers";
+import { Button } from "../components/button";
 
 const links = [
   { name: "Open roles", href: "#" },
@@ -19,7 +21,7 @@ const tiers = [
   {
     name: "Real",
     id: "tier-basic",
-    href: "#",
+    href: "mailto:correo@arsgma.com?subject=Conocer más sobre el plan Real&body=Buen dia,%0D%0A%0D%0A Me interesaría saber más sobre el plan Real.",
     priceMonthly: "$29",
     description:
       "Elaborado para satisfacer todos sus necesidades y estandares en el area de la salud preventiva.",
@@ -34,7 +36,7 @@ const tiers = [
   {
     name: "Imperial",
     id: "tier-premium",
-    href: "#",
+    href: "mailto:correo@arsgma.com?subject=Conocer más sobre el plan Imperial&body=Buen dia,%0D%0A%0D%0A Me interesaría saber más sobre el plan Imperial.",
     priceMonthly: "$99",
     description:
       "Elaborado para satisfacer todos sus necesidades y estandares en el area de la salud preventiva.",
@@ -48,26 +50,7 @@ const tiers = [
     ],
     featured: true,
   },
-  // {
-  //   name: "Ejecutivo",
-  //   id: "tier-executive",
-  //   href: "#",
-  //   priceMonthly: "$29",
-  //   description:
-  //     "The perfect plan if you're just getting started with our product.",
-  //   features: [
-  //     "25 products",
-  //     "Up to 10,000 subscribers",
-  //     "Advanced analytics",
-  //     "24-hour support response time",
-  //   ],
-  //   featured: false,
-  // },
 ];
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 
 const IndexPage = () => {
   return (
@@ -105,7 +88,7 @@ const IndexPage = () => {
             {/* <div className="hidden sm:mb-8 sm:flex sm:justify-center">
               <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                 Announcing our next round of funding.{" "}
-                <a href="/" className="font-semibold text-indigo-600">
+                <a href="/" className="font-semibold text-blue-600">
                   <span className="absolute inset-0" aria-hidden="true"></span>
                   Read more <span aria-hidden="true">&rarr;</span>
                 </a>
@@ -122,12 +105,7 @@ const IndexPage = () => {
                 los estándares mas altos de calidad en sus areas a fines.
               </p>
               <div className="mt-10 flex items-center justify-left md:justify-center gap-x-6">
-                <a
-                  href="#plans"
-                  className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Conoce nuestros planes
-                </a>
+                <Button href="#plans">Conoce nuestros planes</Button>
                 {/* <a href="/" className="text-sm/6 font-semibold text-gray-900">
                   Learn more <span aria-hidden="true">→</span>
                 </a> */}
@@ -150,7 +128,7 @@ const IndexPage = () => {
 
         <div id="providers" className="bg-white py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <h2 className="text-center text-base/7 font-semibold text-indigo-600">
+            <h2 className="text-center text-base/7 font-semibold text-blue-600">
               Prestadoras de Servicios de Salud
             </h2>
             <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
@@ -191,12 +169,9 @@ const IndexPage = () => {
               />
             </div>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="/prestadoras"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
+              <Button href="/prestadoras" className="rpx-3.5 py-2.5">
                 Ver todos
-              </a>
+              </Button>
             </div>
           </div>
         </div>
@@ -218,9 +193,7 @@ const IndexPage = () => {
             />
           </div>
           <div className="mx-auto max-w-4xl text-center">
-            <h2 className="text-base/7 font-semibold text-indigo-600">
-              Planes
-            </h2>
+            <h2 className="text-base/7 font-semibold text-blue-600">Planes</h2>
             <p className="mt-2 text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-6xl">
               Elije el plan que más te convenga*
             </p>
@@ -251,7 +224,7 @@ const IndexPage = () => {
                 <h3
                   id={tier.id}
                   className={classNames(
-                    tier.featured ? "text-indigo-400" : "text-indigo-600",
+                    tier.featured ? "text-blue-400" : "text-blue-600",
                     "text-base/7 font-semibold"
                   )}
                 >
@@ -315,8 +288,8 @@ const IndexPage = () => {
                   aria-describedby={tier.id}
                   className={classNames(
                     tier.featured
-                      ? "bg-indigo-500 text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-indigo-500"
-                      : "text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-indigo-600",
+                      ? "bg-blue-500 text-white shadow-xs hover:bg-blue-400 focus-visible:outline-blue-500"
+                      : "text-blue-600 ring-1 ring-blue-200 ring-inset hover:ring-blue-300 focus-visible:outline-blue-600",
                     "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10"
                   )}
                 >
@@ -366,7 +339,7 @@ const IndexPage = () => {
             <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
               <div className="lg:pr-4">
                 <div className="lg:max-w-lg">
-                  <p className="text-base/7 font-semibold text-indigo-600">
+                  <p className="text-base/7 font-semibold text-blue-600">
                     Tu Salud
                   </p>
                   <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
@@ -397,44 +370,70 @@ const IndexPage = () => {
                   </p>
                   <ul className="mt-8 space-y-8 text-gray-600">
                     <li className="flex gap-x-3">
-                      {/* <CloudArrowUpIcon
-                        aria-hidden="true"
-                        className="mt-1 size-5 flex-none text-indigo-600"
-                      /> */}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="mt-1 size-5 flex-none text-blue-600"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
+                        />
+                      </svg>
+
                       <span>
                         <strong className="font-semibold text-gray-900">
                           Políticas saludables
-                        </strong>{" "}
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Maiores impedit perferendis suscipit eaque, iste
-                        dolor cupiditate blanditiis ratione.
+                        </strong>
                       </span>
                     </li>
                     <li className="flex gap-x-3">
-                      {/* <LockClosedIcon
-                        aria-hidden="true"
-                        className="mt-1 size-5 flex-none text-indigo-600"
-                      /> */}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="mt-1 size-5 flex-none text-blue-600"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"
+                        />
+                      </svg>
+
                       <span>
                         <strong className="font-semibold text-gray-900">
                           Fortalecimiento de la participación social
-                        </strong>{" "}
-                        Anim aute id magna aliqua ad ad non deserunt sunt. Qui
-                        irure qui lorem cupidatat commodo.
+                        </strong>
                       </span>
                     </li>
                     <li className="flex gap-x-3">
-                      {/* <ServerIcon
-                        aria-hidden="true"
-                        className="mt-1 size-5 flex-none text-indigo-600"
-                      /> */}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="mt-1 size-5 flex-none text-blue-600"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z"
+                        />
+                      </svg>
+
                       <span>
                         <strong className="font-semibold text-gray-900">
                           Fortalecimiento de destrezas y potencialidades
                           individuales
-                        </strong>{" "}
-                        Ac tincidunt sapien vehicula erat auctor pellentesque
-                        rhoncus. Et magna sit morbi lobortis.
+                        </strong>
                       </span>
                     </li>
                   </ul>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 
-import Logo from "../images/logo.jpg";
+import Logo from "../images/logo.png";
 
 const navigation = [
   { name: "Prestadoras", href: "/prestadoras" },
@@ -23,7 +23,7 @@ export const Header = () => {
           <div className="flex lg:flex-1">
             <a href="/#home" className="-m-1.5 p-1.5">
               <span className="sr-only">ARS GMA</span>
-              <img alt="" src={Logo} className="h-8 w-auto" />
+              <img alt="" src={Logo} className="h-12 w-auto" />
             </a>
           </div>
           <div className="flex lg:hidden">
