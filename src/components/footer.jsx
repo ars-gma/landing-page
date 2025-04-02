@@ -19,30 +19,23 @@ export const Footer = () => {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="/#plans" className="hover:underline">
+                  <a href="/afiliate" className="hover:text-white">
+                    Afiliate
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a href="/#plans" className="hover:text-white">
                     Planes
                   </a>
                 </li>
-                <li>
-                  <a href="/prestadoras" className="hover:underline">
+                <li className="mb-4">
+                  <a href="/prestadoras" className="hover:text-white">
                     Prestadoras
                   </a>
                 </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Legal
-              </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <a href="/#home" className="hover:underline">
-                    Política de Privacidad
-                  </a>
-                </li>
                 <li>
-                  <a href="/#home" className="hover:underline">
-                    Terminos &amp; Condiciones
+                  <a href="/preguntas-frecuentes" className="hover:text-white">
+                    Preguntas frecuentes
                   </a>
                 </li>
               </ul>
@@ -53,7 +46,7 @@ export const Footer = () => {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <div className="flex flex-row items-center mt-2">
+                  <a href="tel:8096854620" className="flex flex-row items-center mt-2 hover:text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -68,13 +61,15 @@ export const Footer = () => {
                         d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
                       />
                     </svg>
-                    <a href="tel:8096854620" className="hover:underline">
-                      (809) 685-4620
+                      8096854620
                     </a>
-                  </div>
                 </li>
                 <li className="mb-4">
-                  <div className="flex flex-row items-center mt-2">
+
+<a
+  href="mailto:correo@arsgma.com?subject=ARS GMA"
+  className="flex flex-row items-center mt-2 hover:text-white"
+>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -89,14 +84,16 @@ export const Footer = () => {
                         d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
                       />
                     </svg>
-
-                    <a href="mailto:correo@arsgma.com?subject=ARS GMA" className="hover:underline">
                       correo@arsgma.com
                     </a>
-                  </div>
                 </li>
                 <li>
-                  <div className="flex flex-row items-center mt-2">
+                  <a
+                    href="https://www.google.com/maps/place/ARS+GMA/data=!4m2!3m1!1s0x0:0x69a11520c913303c?sa=X&ved=1t:2428&ictx=111"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-row items-center mt-2 hover:text-white"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -116,16 +113,55 @@ export const Footer = () => {
                         d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
                       />
                     </svg>
-
-                    <a
-                      href="https://www.google.com/maps/place/ARS+GMA/data=!4m2!3m1!1s0x0:0x69a11520c913303c?sa=X&ved=1t:2428&ictx=111"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:underline"
-                    >
-                      Direccion sucursal principal
-                    </a>
-                  </div>
+                    Direccion sucursal principal
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                Legal
+              </h2>
+              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                <li className="mb-4">
+                  <a
+                    href="http://www.arsgma.com/files/Ley87-01.pdf"
+                    className="hover:text-white"
+                  >
+                    Sistema Dominicano de Seguridad Social
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    href="http://www.arsgma.com/files/LeyNo.42-00.pdf"
+                    className="hover:text-white"
+                  >
+                    Ley General Sobre la Discapacidad
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    href="http://www.arsgma.com/files/Ley50-88SobreDrogas.pdf"
+                    className="hover:text-white"
+                  >
+                    Ley Sobre Drogas y Sustancias Controladas
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    href="http://www.arsgma.com/files/Ley42-01.pdf"
+                    className="hover:text-white"
+                  >
+                    Ley General de Salud
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://www.arsgma.com/files/Ley_No_177-09.pdf"
+                    className="hover:text-white"
+                  >
+                    Ley de Amnistia
+                  </a>
                 </li>
               </ul>
             </div>
@@ -134,15 +170,14 @@ export const Footer = () => {
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2009 <a href="/">ARS GMA</a>. Todos los
-            Derechos Reservados.
+            © 2009 <a href="/">ARS GMA</a>. Todos los Derechos Reservados.
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             <a
               href="https://www.facebook.com/arsgma"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+              className="text-gray-500 hover:text-white ms-5"
             >
               <svg
                 className="w-4 h-4"
@@ -163,7 +198,7 @@ export const Footer = () => {
               href="https://x.com/arsgma"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+              className="text-gray-500 hover:text-white ms-5"
             >
               <svg
                 className="w-4 h-4"
@@ -184,7 +219,7 @@ export const Footer = () => {
               href="https://www.instagram.com/arsgmard"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+              className="text-gray-500 hover:text-white ms-5"
             >
               <svg
                 className="w-4 h-4"

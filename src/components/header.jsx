@@ -4,18 +4,23 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import Logo from "../images/logo.png";
 
 const navigation = [
+  { name: "Afiliate", href: "/afiliate" },
   { name: "Prestadoras", href: "/prestadoras" },
   { name: "Planes", href: "/#plans" },
-  { name: "Noticias", href: "/" },
   { name: "Contactanos", href: "/contactanos" },
 ];
 
 export const Header = () => {
+  const isHomeDisplaying = typeof window !== "undefined" && window.location.pathname === "/";
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  
   return (
     <div className="bg-white">
-      <header className="absolute md:fixed md:bg-white md:border-b inset-x-0 top-0 z-50">
+      <header
+        className={`${
+          isHomeDisplaying ? "fixed" : "absolute"
+        } bg-white border inset-x-0 top-0 z-50 max-w-[95%] m-auto mt-[1rem] rounded-[3rem] shadow-md`}
+      >
         <nav
           aria-label="Global"
           className="flex items-center justify-between p-6 lg:px-8"
@@ -54,17 +59,12 @@ export const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm/6 font-semibold text-gray-900"
+                className="text-lg font-semibold text-gray-900 hover:text-blue-600"
               >
                 {item.name}
               </a>
             ))}
           </div>
-          {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm/6 font-semibold text-gray-900">
-              Log in <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div> */}
         </nav>
         <Dialog
           open={mobileMenuOpen}
@@ -113,14 +113,6 @@ export const Header = () => {
                     </a>
                   ))}
                 </div>
-                {/* <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                  >
-                    Log in
-                  </a>
-                </div> */}
               </div>
             </div>
           </DialogPanel>
