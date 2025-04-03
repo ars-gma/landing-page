@@ -1,25 +1,28 @@
 import React, { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
+import { useLocation } from '@reach/router';
 
 import Logo from "../images/logo.png";
+import { classNames } from "../utils/helpers";
 
 const navigation = [
-  { name: "Afiliate", href: "/afiliate" },
+  { name: "Afíliate", href: "/afiliate" },
   { name: "Prestadoras", href: "/prestadoras" },
   { name: "Planes", href: "/#plans" },
   { name: "Contactanos", href: "/contactanos" },
 ];
 
 export const Header = () => {
-  const isHomeDisplaying = typeof window !== "undefined" && window.location.pathname === "/";
+  const location = useLocation();
+  const isHomeDisplaying = location.pathname === "/";
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
+
   return (
     <div className="bg-white">
       <header
         className={`${
           isHomeDisplaying ? "fixed" : "absolute"
-        } bg-white border inset-x-0 top-0 z-50 max-w-[95%] m-auto mt-[1rem] rounded-[3rem] shadow-md`}
+        } bg-white border inset-x-0 top-0 z-50 max-w-[95%] md:max-w-[85%] m-auto mt-[1rem] rounded-[3rem] shadow-md`}
       >
         <nav
           aria-label="Global"
@@ -54,12 +57,16 @@ export const Header = () => {
               </svg>
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
+          <div className="hidden lg:flex lg:gap-x-12 items-center">
+            {navigation.map((item, index) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-lg font-semibold text-gray-900 hover:text-blue-600"
+                className={classNames(
+                  "text-lg font-semibold text-gray-900 hover:text-blue-600",
+                  index === 0 &&
+                    "bg-blue-600 py-2 px-8 border border-solid border-blue-700 text-white rounded-[3rem] hover:bg-blue-700 hover:border-blue-800 hover:text-white"
+                )}
               >
                 {item.name}
               </a>

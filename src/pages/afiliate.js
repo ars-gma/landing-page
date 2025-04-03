@@ -101,7 +101,7 @@ const SubsidiaryPage = () => {
   return (
     <Layout>
       <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-32">
-        <div className="mt-4 mb-8">
+        <div className="mt-16 md:mt-4 mb-8">
           <h1 className="text-pretty text-5xl font-black">Afiliación</h1>
         </div>
         <div className="overflow-hidden bg-white py-6">
@@ -162,5 +162,5 @@ const SubsidiaryPage = () => {
 export default SubsidiaryPage;
 
 export const Head = () => (
-  <Seo title="ARS GMA - Tu salud protegida | Afiliate" />
+  <Seo title="ARS GMA - Tu salud protegida | Afíliate" />
 );

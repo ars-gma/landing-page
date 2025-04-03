@@ -1,12 +1,13 @@
 import * as React from "react";
 import { SEO as Seo } from "../components/seo";
+import { ExternalLink } from "../components/externalLink";
 import { Layout } from "../components/layout";
 
 const FaqsPage = () => {
   return (
     <Layout>
       <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-32">
-        <div className="mt-4 mb-8 text-center">
+        <div className="mt-16 md:mt-4 mb-8 text-center">
           <h1 className="text-pretty text-5xl font-black">
             Preguntas frecuentes
           </h1>
@@ -15,12 +16,12 @@ const FaqsPage = () => {
             con nosotros.
           </h4>
         </div>
-        <div class="grid pt-8 text-left border-t border-gray-200 md:gap-4 md:grid-cols-3">
+        <div className="grid pt-8 text-left border-t border-gray-200 md:gap-4 md:grid-cols-3">
           <div>
-            <div class="mb-10">
-              <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900">
+            <div className="mb-10">
+              <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900">
                 <svg
-                  class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
+                  className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +34,7 @@ const FaqsPage = () => {
                 </svg>
                 ¿Qué puede cubrir un seguro médico?
               </h3>
-              <p class="text-pretty text-gray-500">
+              <p className="text-pretty text-gray-500">
                 Las coberturas habituales de un seguro médico se organizan en
                 torno a cinco grupos de atención médica:
                 <br />
@@ -66,10 +67,10 @@ const FaqsPage = () => {
                 </ul>
               </p>
             </div>
-            <div class="mb-10">
-              <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 ">
+            <div className="mb-10">
+              <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 ">
                 <svg
-                  class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
+                  className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -82,16 +83,16 @@ const FaqsPage = () => {
                 </svg>
                 ¿Qué pruebas y especialidades incluye el seguro?
               </h3>
-              <p class="text-gray-500 ">
+              <p className="text-gray-500 ">
                 Infórmate sobre las especialidades médicas, quirúrgicas y
                 pruebas diagnósticas que pone a tu disposición la compañía y a
                 los que puedes acceder con cada seguro.
               </p>
             </div>
-            <div class="mb-10">
-              <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 ">
+            <div className="mb-10">
+              <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 ">
                 <svg
-                  class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
+                  className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +105,7 @@ const FaqsPage = () => {
                 </svg>
                 ¿Podré elegir el especialista que necesito?
               </h3>
-              <p class="text-gray-500 ">
+              <p className="text-gray-500 ">
                 Otro factor importante a la hora de decidirte por un seguro
                 médico u otro, es que revises si tus médicos de referencia están
                 concertados por la aseguradora.
@@ -116,10 +117,10 @@ const FaqsPage = () => {
                 médico del mundo.
               </p>
             </div>
-            <div class="mb-10">
-              <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 ">
+            <div className="mb-10">
+              <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 ">
                 <svg
-                  class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
+                  className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +134,7 @@ const FaqsPage = () => {
                 ¿Es importante que la compañía disponga de centros propios,
                 además de los centros concertados?
               </h3>
-              <p class="text-gray-500 ">
+              <p className="text-gray-500 ">
                 Es destacable que la compañía disponga de centros médicos
                 propios en exclusiva para sus clientes, o bien, centros médicos
                 concertados en los que se trata de manera preferente a los
@@ -146,10 +147,10 @@ const FaqsPage = () => {
             </div>
           </div>
           <div>
-            <div class="mb-10">
-              <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 ">
+            <div className="mb-10">
+              <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 ">
                 <svg
-                  class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
+                  className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -162,7 +163,7 @@ const FaqsPage = () => {
                 </svg>
                 ¿Qué he de valorar en los centros médicos?
               </h3>
-              <p class="text-gray-500 ">
+              <p className="text-gray-500 ">
                 También es importante valorar los centros, tanto propios como
                 concertados, que la compañía pone a tu disposición: el estado de
                 las instalaciones, accesibilidad, disponibilidad de parking,
@@ -178,10 +179,10 @@ const FaqsPage = () => {
                 últimos tratamientos y avances tecnológicos.
               </p>
             </div>
-            <div class="mb-10">
-              <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 ">
+            <div className="mb-10">
+              <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 ">
                 <svg
-                  class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
+                  className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -194,7 +195,7 @@ const FaqsPage = () => {
                 </svg>
                 ¿Por qué escoger una compañía y no otra?
               </h3>
-              <p class="text-gray-500 ">
+              <p className="text-gray-500 ">
                 Ya que contratar un seguro médico se hace pensando en el medio y
                 largo plazo, asegúrate que la compañía tiene prestigio y
                 demostrada experiencia.
@@ -206,10 +207,10 @@ const FaqsPage = () => {
                 traumatología, entre otras).
               </p>
             </div>
-            <div class="mb-10">
-              <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 ">
+            <div className="mb-10">
+              <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 ">
                 <svg
-                  class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
+                  className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -222,7 +223,7 @@ const FaqsPage = () => {
                 </svg>
                 ¿Puedo incluir seguro dental?
               </h3>
-              <p class="text-gray-500 ">
+              <p className="text-gray-500 ">
                 Muchos seguros médicos incluyen odontoestomatología básica, que
                 cubre por ejemplo extracciones, curas estomatológicas derivadas
                 de éstas o limpiezas de boca.
@@ -236,10 +237,10 @@ const FaqsPage = () => {
                 precios adecuados.
               </p>
             </div>
-            <div class="mb-10">
-              <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 ">
+            <div className="mb-10">
+              <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 ">
                 <svg
-                  class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
+                  className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -253,7 +254,7 @@ const FaqsPage = () => {
                 Además de seguros médicos y dentales… ¿Qué otros servicios me
                 puede ofrecer una aseguradora de salud?
               </h3>
-              <p class="text-gray-500 ">
+              <p className="text-gray-500 ">
                 Ya que la salud es mucho más que curar enfermedades, ahora
                 puedes acceder a una amplia oferta de servicios de salud, muy
                 relacionados con el bienestar personal. De ahí que sea
@@ -264,10 +265,10 @@ const FaqsPage = () => {
             </div>
           </div>
           <div>
-            <div class="mb-10">
-              <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 ">
+            <div className="mb-10">
+              <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 ">
                 <svg
-                  class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
+                  className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -280,7 +281,7 @@ const FaqsPage = () => {
                 </svg>
                 ¿Podré acceder directamente a todas las coberturas?
               </h3>
-              <p class="text-gray-500 ">
+              <p className="text-gray-500 ">
                 Previamente a contratar tu seguro médico, consulta si contempla
                 períodos de espera.
                 <br />
@@ -292,10 +293,10 @@ const FaqsPage = () => {
                 garantías de la póliza.
               </p>
             </div>
-            <div class="mb-10">
-              <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 ">
+            <div className="mb-10">
+              <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 ">
                 <svg
-                  class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
+                  className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -308,7 +309,7 @@ const FaqsPage = () => {
                 </svg>
                 ¿He de pagar por ir al médico?
               </h3>
-              <p class="text-gray-500 ">
+              <p className="text-gray-500 ">
                 Normalmente los seguros de cuadro médico (no así los de
                 reembolso) conllevan una coparticipación en el coste de los
                 servicios o copago. El copago es una cantidad mínima establecida
@@ -322,6 +323,78 @@ const FaqsPage = () => {
                 copago se evitan subidas genéricas de la prima a toda la cartera
                 de clientes gracias a la distribución de dicho coste según el
                 uso de servicios médicos realizado por cada cliente.
+              </p>
+            </div>
+            <div className="mb-10">
+              <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 ">
+                <svg
+                  className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                ¿Sabias que ahora puedes seleccionar la ARS que desees?
+              </h3>
+              <p className="text-gray-500 ">
+                A partir del 18 de Agosto de 2008, inicio el proceso de libre
+                elección, según lo establece la Resolución 154-2008 emitida por
+                la Superintendencia de Salud y Riesgos Laborales.
+                <br />
+                <br />
+                Esta resolución establece tu derecho a seleccionar la ARS que
+                desees.
+              </p>
+            </div>
+            <div className="mb-10">
+              <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 ">
+                <svg
+                  className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 "
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                ¿Qué condiciones aplican para hacer el traspaso?
+              </h3>
+              <p className="text-gray-500 ">
+                Poseer como mínimo 12 cotizaciones continuas al sistema en una
+                ARS. Estar al día en los pagos a la Tesorería de la Seguridad
+                Social.
+                <br />
+                Que ningún miembro del núcleo familiar tenga cirugías pendientes
+                o tratamientos en curso por enfermedades catastróficas.
+                <br />
+                <br />
+                Consulta tu estatus en la Tesorería de la Seguridad Social (TSS)
+                y confirma que cumples con las condiciones para realizar el
+                traspaso,{" "}
+                <ExternalLink href="https://suir.gob.do/Login.aspx?ReturnUrl=%2f">
+                  verificate
+                </ExternalLink>
+                .
+                <br />
+                <br />
+                Importante tener en cuenta
+                <br />• La solicitud de traspaso deberá realizarla el titular
+                del núcleo familiar.
+                <br />• Toda solicitud de traspaso implicará el titular y de
+                todos sus dependientes.
+                <br />• Podrás cambiar de ARS una vez por año, siempre que
+                cumpla los procedimientos. • No ser Afiliados de una ARS de
+                Autogestion.
+                <br />• Hasta no culminar el proceso seguira recibiendo servicos
+                de su ARS actual.
               </p>
             </div>
           </div>

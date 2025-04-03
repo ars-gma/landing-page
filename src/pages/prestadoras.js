@@ -11,10 +11,12 @@ const ProvidersPage = () => {
   const [list, setList] = useState([]);
   const [types, setTypes] = useState([]);
   const [cities, setCities] = useState([]);
+  const [filterText, setFilterText] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [pages, setPages] = useState(1);
   const [startPagination, setStartPagination] = useState(1);
   const [endPagination, setEndPagination] = useState(PAGINATION);
+  const [totalPagination, setTotalPagination] = useState(PAGINATION);
 
   const providers = unformatProviders.map((item) => ({
     ...item,
@@ -38,46 +40,25 @@ const ProvidersPage = () => {
   };
 
   // TODO get access
-  const getProviders = async () => {
-    fetch("http://arsgma.com/app/router.php", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-        Origin: "arsgma.com",
-      },
-      body: JSON.stringify({
-        app: "4rsgm4",
-        task: "buscar",
-        provincias: "Distrito Nacional",
-        nombre: "",
-        tipo: "todos",
-        especialidad: "todas",
-      }),
-    })
-      .then((r) => console.log("response", r))
-      .catch((err) => console.log("error", err));
-  };
-
-  useEffect(() => {
-    if (list?.length === 0 && providers?.length > 0) {
-      setList(providers.slice(0, PAGINATION + 1));
-      setPages(parseInt(Math.ceil(providers.length / PAGINATION)));
-      setTypes([...new Set(providers.map((item) => item.type))]);
-      setCities([...new Set(providers.map((item) => item.city))]);
-    }
-    getProviders();
-  }, [list, providers]);
-
-  useEffect(() => {
-    const end =
-      currentPage * PAGINATION > providers.length
-        ? providers.length
-        : currentPage * PAGINATION;
-    const start = end - (PAGINATION - 1);
-    setStartPagination(start);
-    setEndPagination(end);
-    setList(providers.slice(start, end + 1));
-  }, [currentPage]);
+  // const getProviders = async () => {
+  //   fetch("http://arsgma.com/app/router.php", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+  //       Origin: "arsgma.com",
+  //     },
+  //     body: JSON.stringify({
+  //       app: "4rsgm4",
+  //       task: "buscar",
+  //       provincias: "Distrito Nacional",
+  //       nombre: "",
+  //       tipo: "todos",
+  //       especialidad: "todas",
+  //     }),
+  //   })
+  //     .then((r) => console.log("response", r))
+  //     .catch((err) => console.log("error", err));
+  // };
 
   const getIconByType = (type) => {
     switch (type) {
@@ -89,7 +70,7 @@ const ProvidersPage = () => {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            class="w-7 h-7 text-gray-500 mb-3"
+            className="w-7 h-7 text-gray-500 mb-3"
           >
             <path
               strokeLinecap="round"
@@ -106,7 +87,7 @@ const ProvidersPage = () => {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            class="w-7 h-7 text-gray-500 mb-3"
+            className="w-7 h-7 text-gray-500 mb-3"
           >
             <path
               strokeLinecap="round"
@@ -123,7 +104,7 @@ const ProvidersPage = () => {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            class="w-7 h-7 text-gray-500 mb-3"
+            className="w-7 h-7 text-gray-500 mb-3"
           >
             <path
               strokeLinecap="round"
@@ -140,7 +121,7 @@ const ProvidersPage = () => {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            class="w-7 h-7 text-gray-500 mb-3"
+            className="w-7 h-7 text-gray-500 mb-3"
           >
             <path
               strokeLinecap="round"
@@ -157,7 +138,7 @@ const ProvidersPage = () => {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            class="w-7 h-7 text-gray-500 mb-3"
+            className="w-7 h-7 text-gray-500 mb-3"
           >
             <path
               strokeLinecap="round"
@@ -169,24 +150,66 @@ const ProvidersPage = () => {
     }
   };
 
+  useEffect(() => {
+    if (list?.length === 0 && providers?.length > 0) {
+      setList(providers.slice(0, PAGINATION + 1));
+      setPages(parseInt(Math.ceil(providers.length / PAGINATION)));
+      setTypes([...new Set(providers.map((item) => item.type))]);
+      setCities([...new Set(providers.map((item) => item.city))]);
+    }
+    // getProviders();
+  }, [providers]);
+
+  useEffect(() => {
+    if (filterText.length > 1) {
+      const filteredList = providers.filter(
+        (provider) =>
+          provider.title.toUpperCase().includes(filterText.toUpperCase()) ||
+          provider.city.toUpperCase().includes(filterText.toUpperCase()) ||
+          provider.type.toUpperCase().includes(filterText.toUpperCase())
+      );
+      const end =
+        currentPage * PAGINATION > filteredList.length
+          ? filteredList.length
+          : currentPage * PAGINATION;
+      const start = end > PAGINATION - 1 ? Math.abs(end - (PAGINATION - 1)) : 1;
+      setStartPagination(start);
+      setEndPagination(end);
+      setList(filteredList.slice(start, end + 1));
+      setPages(parseInt(Math.ceil(filteredList.length / PAGINATION)));
+      setTotalPagination(filteredList.length);
+    } else {
+      const end =
+        currentPage * PAGINATION > providers.length
+          ? providers.length
+          : currentPage * PAGINATION;
+      const start = end - (PAGINATION - 1);
+      setStartPagination(start);
+      setEndPagination(end);
+      setList(providers.slice(start, end + 1));
+      setPages(parseInt(Math.ceil(providers.length / PAGINATION)));
+      setTotalPagination(providers.length);
+    }
+  }, [filterText, currentPage]);
+
   return (
     <Layout>
       <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-32">
-        <div className="mt-4 mb-8">
+        <div className="mt-16 md:mt-4 mb-8">
           <h1 className="text-pretty text-5xl font-black">Directorio Médico</h1>
         </div>
         <div className="grid grid-cols-1 h-full w-full">
-          <form class="w-lg md:mx-32 lg:mx-64 mb-4">
+          <form className="w-lg md:mx-32 lg:mx-64 mb-4">
             <label
-              for="default-search"
-              class="mb-2 text-sm font-medium text-gray-900 sr-only"
+              htmlFor="default-search"
+              className="mb-2 text-sm font-medium text-gray-900 sr-only"
             >
               Buscador
             </label>
-            <div class="relative">
-              <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+            <div className="relative">
+              <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                 <svg
-                  class="w-4 h-4 text-gray-500"
+                  className="w-4 h-4 text-gray-500"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -194,9 +217,9 @@ const ProvidersPage = () => {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
                   />
                 </svg>
@@ -204,31 +227,29 @@ const ProvidersPage = () => {
               <input
                 type="search"
                 id="default-search"
-                class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Buscar prestadores por nombre, tipo, o ciudad"
                 required
+                onChange={(e) => setFilterText(e.target.value)}
               />
-              <button
-                type="submit"
-                class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"
-              >
-                Buscar
-              </button>
             </div>
           </form>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 h-full w-full">
             {list.map((item) => (
-              <div class="group relative cursor-pointer overflow-hidden bg-white shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl max-w-sm p-6 border border-gray-200 rounded-lg">
+              <div
+                key={item.key}
+                className="group relative cursor-pointer overflow-hidden bg-white shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl max-w-sm p-6 border border-gray-200 rounded-lg"
+              >
                 <Link
                   href={`tel:${item.phone}`}
                   className="transition duration-500 hover:scale-125"
                 >
                   {getIconByType(item.type)}
-                  <h5 class="mb-1 text-xl font-semibold tracking-tight text-gray-900">
+                  <h5 className="mb-1 text-xl font-semibold tracking-tight text-gray-900">
                     {item.title}
                   </h5>
-                  <p class="font-lg text-gray-500">{item.type}</p>
-                  <p class="mb-3 font-normal text-gray-400">{item.city}</p>
+                  <p className="font-lg text-gray-500">{item.type}</p>
+                  <p className="mb-3 font-normal text-gray-400">{item.city}</p>
                   <div className="flex flex-row items-center font-medium text-gray-500">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -272,68 +293,71 @@ const ProvidersPage = () => {
                   <span className="font-medium"> {startPagination} </span>a
                   <span className="font-medium"> {endPagination} </span>
                   de
-                  <span className="font-medium"> {providers?.length} </span>
+                  <span className="font-medium"> {totalPagination} </span>
                   resultados
                 </p>
               </div>
-              <div>
-                <nav
-                  className="isolate inline-flex -space-x-px rounded-md shadow-xs"
-                  aria-label="Paginación"
-                >
-                  <Link
-                    onClick={onPreviousClick}
-                    className="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+              {pages > 1 && (
+                <div>
+                  <nav
+                    className="isolate inline-flex -space-x-px rounded-md shadow-xs"
+                    aria-label="Paginación"
                   >
-                    <span className="sr-only">Anterior</span>
-                    <svg
-                      className="size-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      aria-hidden="true"
-                      data-slot="icon"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </Link>
-                  {Array.from({ length: pages }).map((_, index) => (
                     <Link
-                      onClick={() => goToPage(index + 1)}
-                      aria-current={currentPage === index + 1 && "page"}
-                      className={classNames(
-                        currentPage === index + 1 &&
-                          "bg-blue-600 text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600",
-                        "relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-                      )}
+                      onClick={onPreviousClick}
+                      className="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
                     >
-                      {index + 1}
+                      <span className="sr-only">Anterior</span>
+                      <svg
+                        className="size-5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                        data-slot="icon"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
                     </Link>
-                  ))}
-                  <Link
-                    onClick={onNextClick}
-                    className="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-                  >
-                    <span className="sr-only">Siguiente</span>
-                    <svg
-                      className="size-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      aria-hidden="true"
-                      data-slot="icon"
+                    {Array.from({ length: pages }).map((_, index) => (
+                      <Link
+                        key={`link_${index}`}
+                        onClick={() => goToPage(index + 1)}
+                        aria-current={currentPage === index + 1 && "page"}
+                        className={classNames(
+                          currentPage === index + 1 &&
+                            "bg-blue-600 text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600",
+                          "relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+                        )}
+                      >
+                        {index + 1}
+                      </Link>
+                    ))}
+                    <Link
+                      onClick={onNextClick}
+                      className="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
                     >
-                      <path
-                        fillRule="evenodd"
-                        d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </Link>
-                </nav>
-              </div>
+                      <span className="sr-only">Siguiente</span>
+                      <svg
+                        className="size-5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                        data-slot="icon"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </Link>
+                  </nav>
+                </div>
+              )}
             </div>
           </div>
         </div>

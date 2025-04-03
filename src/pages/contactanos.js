@@ -6,7 +6,7 @@ const ContactUsPage = () => {
   return (
     <Layout>
       <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-32">
-        <div className="mt-4 mb-8">
+        <div className="mt-16 md:mt-4 mb-8">
           <h1 className="text-pretty text-5xl font-black">Comunicate</h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 h-full w-full">
@@ -168,7 +168,7 @@ const ContactUsPage = () => {
                         name="phone-number"
                         type="text"
                         placeholder="809-123-4567"
-                        className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base border text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                        className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 border outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600"
                       />
                     </div>
                   </div>

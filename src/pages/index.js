@@ -49,21 +49,6 @@ const IndexPage = () => {
   return (
     <Layout>
       <main>
-        {/* <div className="area">
-          <ul className="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div> */}
-
         <div
           id="home"
           className="relative isolate px-6 pt-4 md:pt-32 lg:px-8 bg-zinc-50 bg-hero2 bg-bottom bg-cover bg-no-repeat"
@@ -80,8 +65,8 @@ const IndexPage = () => {
               }}
             ></div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 h-full w-full">
-            <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+          <div className="grid grid-cols-1 sm:grid-cols-2 h-full w-full md:px-32">
+            <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 ">
               <h1 className="text-5xl font-bold tracking-tight text-balance text-slate-50 sm:text-7xl">
                 Protegiendo tu salud
               </h1>
@@ -185,6 +170,106 @@ const IndexPage = () => {
               Elije el plan que más te convenga*
             </p>
           </div>
+
+          {/* <div className="mb-4 border-b border-gray-200">
+            <ul
+              className="flex flex-wrap -mb-px text-sm font-medium text-center"
+              id="default-tab"
+              data-tabs-toggle="#default-tab-content"
+              role="tablist"
+            >
+              <li className="me-2" role="presentation">
+                <button
+                  className="inline-block p-4 border-b-2 rounded-t-lg"
+                  id="first-tier-tab"
+                  data-tabs-target="#first-tier"
+                  type="button"
+                  role="tab"
+                  aria-controls="first-tier"
+                  aria-selected="true"
+                >
+                  Básico
+                </button>
+              </li>
+              <li className="me-2" role="presentation">
+                <button
+                  className="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                  id="second-tier-tab"
+                  data-tabs-target="#second-tier"
+                  type="button"
+                  role="tab"
+                  aria-controls="second-tier"
+                  aria-selected="false"
+                >
+                  Complementarios
+                </button>
+              </li>
+              <li className="me-2" role="presentation">
+                <button
+                  className="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                  id="third-tier-tab"
+                  data-tabs-target="#third-tier"
+                  type="button"
+                  role="tab"
+                  aria-controls="third-tier"
+                  aria-selected="false"
+                >
+                  Voluntarios
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div id="default-tab-content">
+            <div
+              className="p-4 rounded-lg bg-gray-50"
+              id="first-tier"
+              role="tabpanel"
+              aria-labelledby="first-tier-tab"
+            >
+              <p className="text-sm text-gray-500">
+                This is some placeholder content the{" "}
+                <strong className="font-medium text-gray-800">
+                  Profile tab's associated content
+                </strong>
+                . Clicking another tab will toggle the visibility of this one
+                for the next. The tab JavaScript swaps classes to control the
+                content visibility and styling.
+              </p>
+            </div>
+            <div
+              className="hidden p-4 rounded-lg bg-gray-50"
+              id="second-tier"
+              role="tabpanel"
+              aria-labelledby="second-tier-tab"
+            >
+              <p className="text-sm text-gray-500">
+                This is some placeholder content the{" "}
+                <strong className="font-medium text-gray-800">
+                  Dashboard tab's associated content
+                </strong>
+                . Clicking another tab will toggle the visibility of this one
+                for the next. The tab JavaScript swaps classes to control the
+                content visibility and styling.
+              </p>
+            </div>
+            <div
+              className="hidden p-4 rounded-lg bg-gray-50"
+              id="third-tier"
+              role="tabpanel"
+              aria-labelledby="third-tier-tab"
+            >
+              <p className="text-sm text-gray-500">
+                This is some placeholder content the{" "}
+                <strong className="font-medium text-gray-800">
+                  Settings tab's associated content
+                </strong>
+                . Clicking another tab will toggle the visibility of this one
+                for the next. The tab JavaScript swaps classes to control the
+                content visibility and styling.
+              </p>
+            </div>
+          </div> */}
+
           <p className="mx-auto mt-6 max-w-4xl text-center text-lg font-medium text-pretty text-gray-600 sm:text-xl/8">
             El Plan de Servicio de Salud (PDSS) es el plan se salud que se
             encargará de asegurar a todos los ciudadanos dominicanos la

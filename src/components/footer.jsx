@@ -20,7 +20,7 @@ export const Footer = () => {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a href="/afiliate" className="hover:text-white">
-                    Afiliate
+                    Afíliate
                   </a>
                 </li>
                 <li className="mb-4">
