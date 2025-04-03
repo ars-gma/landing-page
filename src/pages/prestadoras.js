@@ -182,6 +182,7 @@ const ProvidersPage = () => {
         setStartPagination(null);
         setEndPagination(null);
         setTotalPagination(null);
+        setPages(0);
         setList([]);
       }
     } else {
@@ -200,7 +201,7 @@ const ProvidersPage = () => {
 
   return (
     <Layout>
-      <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-32">
+      <main className="grid min-h-full place-items-center px-6 py-24 sm:py-32 lg:px-32">
         <div className="mt-16 md:mt-4 mb-8">
           <h1 className="text-pretty text-5xl font-black">Directorio Médico</h1>
         </div>
@@ -233,7 +234,7 @@ const ProvidersPage = () => {
               <input
                 type="search"
                 id="default-search"
-                className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                className="block bg-white w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Buscar prestadores por nombre, tipo, o ciudad"
                 required
                 onChange={(e) => setFilterText(e.target.value)}
@@ -288,9 +289,9 @@ const ProvidersPage = () => {
               ))}
             </div>
           )}
-          <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6 mt-8">
+          <div className="flex items-center justify-between border-t border-gray-200 px-4 py-3 sm:px-6 mt-8">
             {pages > 1 && (
-              <div className="flex flex-1 justify-between sm:hidden">
+              <div className="flex flex-1 justify-between items-center sm:hidden">
                 {currentPage !== 1 && (
                   <Link
                     onClick={onPreviousClick}

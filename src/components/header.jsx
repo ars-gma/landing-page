@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { useLocation } from '@reach/router';
+import { useLocation } from "@reach/router";
 
 import Logo from "../images/logo.png";
 import { classNames } from "../utils/helpers";
@@ -13,7 +13,7 @@ export const LINKS = {
   plans: "/#plans",
   contactUs: "/contactanos",
   faqs: "/preguntas-frecuentes",
-}
+};
 
 const navigation = [
   { name: "Afíliate", href: LINKS.register },
@@ -22,13 +22,18 @@ const navigation = [
   { name: "Contactanos", href: LINKS.contactUs },
 ];
 
+const mobileNavigation = [
+  ...navigation,
+  { name: "Preguntas frecuentes", href: LINKS.faqs }
+]
+
 export const Header = () => {
   const location = useLocation();
   const isHomeDisplaying = location.pathname === LINKS.home;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="bg-white">
+    <div className="">
       <header
         className={`${
           isHomeDisplaying ? "fixed" : "absolute"
@@ -90,10 +95,10 @@ export const Header = () => {
         >
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div className="flex items-center justify-between">
-              <a href="/" className="-m-1.5 p-1.5">
+            <div className="flex items-center justify-between px-3 py-4">
+              <a href={LINKS.home} className="-m-1.5 p-1.5">
                 <span className="sr-only">ARS GMA</span>
-                <img alt="" src={Logo} className="h-8 w-auto" />
+                <img alt="" src={Logo} className="h-12 w-auto" />
               </a>
               <button
                 type="button"
@@ -117,20 +122,26 @@ export const Header = () => {
                 </svg>
               </button>
             </div>
-            <div className="mt-6 flow-root">
+            <div className="mt-6 px-4 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
+                  {mobileNavigation.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                      className="-mx-3 block px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 border-b border-gray-400"
                     >
                       {item.name}
                     </a>
                   ))}
                 </div>
               </div>
+            </div>
+            <div className="absolute bottom-[2rem] w-auto">
+              <span className="text-sm text-gray-500">
+                © 2009 <a href={LINKS.home}>ARS GMA</a>. Todos los Derechos
+                Reservados.
+              </span>
             </div>
           </DialogPanel>
         </Dialog>

@@ -101,11 +101,11 @@ const features = [
 const SubsidiaryPage = () => {
   return (
     <Layout>
-      <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-32">
+      <main className="grid min-h-full place-items-center px-6 py-24 sm:py-32 lg:px-32">
         <div className="mt-16 md:mt-4 mb-8">
           <h1 className="text-pretty text-5xl font-black">Afiliación</h1>
         </div>
-        <div className="overflow-hidden bg-white py-6">
+        <div className="overflow-hidden py-6">
           <div className="mx-auto max-w-7xl px-4 md:px-8">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
               <div className="lg:pt-4 lg:pr-8">

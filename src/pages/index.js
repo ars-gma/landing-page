@@ -52,7 +52,7 @@ const IndexPage = () => {
       <main>
         <section
           id="home"
-          className="relative isolate px-6 pt-4 md:pt-32 lg:px-8 bg-zinc-50 bg-hero2 bg-bottom bg-cover bg-no-repeat"
+          className="relative isolate px-6 pt-4 md:pt-32 lg:px-8 bg-zinc-50 bg-[url(../images/gradient-background.gif)] bg-bottom bg-cover bg-no-repeat"
         >
           <div
             className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -99,7 +99,7 @@ const IndexPage = () => {
           </div>
         </section>
 
-        <section id="providers" className="bg-white py-24 sm:py-32">
+        <section id="providers" className="py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 className="text-center text-base/7 font-semibold text-blue-600">
               Prestadoras de Servicios de Salud
@@ -151,7 +151,7 @@ const IndexPage = () => {
 
         <section
           id="plans"
-          className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8"
+          className="relative isolate px-6 py-24 sm:py-32 lg:px-8"
         >
           <div
             aria-hidden="true"
@@ -375,7 +375,7 @@ const IndexPage = () => {
 
         <section
           id="health"
-          className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0"
+          className="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0"
         >
           <div className="absolute inset-0 -z-10 overflow-hidden">
             <svg
@@ -581,7 +581,7 @@ const IndexPage = () => {
           </div>
         </section>
 
-        <section class="py-24 bg-white">
+        <section class="py-24">
           <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col justify-center items-center gap-x-16 gap-y-5 xl:gap-28 lg:flex-row lg:justify-between max-lg:max-w-2xl mx-auto max-w-full">
               <div class="w-full lg:w-1/2">

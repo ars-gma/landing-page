@@ -7,7 +7,7 @@ const ContactUsPage = () => {
   return (
     <Layout>
       {/* px-6 2 md:px-[12rem] lg:px-[16rem] */}
-      <main className="grid min-h-full place-items-center bg-white py-24 px-6 sm:py-32 md:px-[4rem] lg:px-[16rem]">
+      <main className="grid min-h-full place-items-center py-24 px-6 sm:py-32 md:px-[4rem] lg:px-[16rem]">
         <div className="mt-16 md:mt-4 mb-8">
           <h1 className="text-pretty text-5xl font-black">Comunicate</h1>
         </div>

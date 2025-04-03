@@ -6,7 +6,7 @@ import { LINKS } from "../components/header";
 const NotFoundPage = () => {
   return (
     <Layout>
-      <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8 h-screen">
+      <main className="grid min-h-full place-items-center px-6 py-24 sm:py-32 lg:px-8 h-screen">
         <div className="text-center">
           <p className="text-base text-3xl sm:text-5xl font-semibold text-blue-600">
             404
