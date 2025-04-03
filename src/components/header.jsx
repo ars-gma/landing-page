@@ -5,16 +5,26 @@ import { useLocation } from '@reach/router';
 import Logo from "../images/logo.png";
 import { classNames } from "../utils/helpers";
 
+export const LINKS = {
+  home: "/",
+  homeHero: "/#home",
+  register: "/afiliate",
+  providers: "/prestadoras",
+  plans: "/#plans",
+  contactUs: "/contactanos",
+  faqs: "/preguntas-frecuentes",
+}
+
 const navigation = [
-  { name: "Afíliate", href: "/afiliate" },
-  { name: "Prestadoras", href: "/prestadoras" },
-  { name: "Planes", href: "/#plans" },
-  { name: "Contactanos", href: "/contactanos" },
+  { name: "Afíliate", href: LINKS.register },
+  { name: "Prestadoras", href: LINKS.providers },
+  { name: "Planes", href: LINKS.plans },
+  { name: "Contactanos", href: LINKS.contactUs },
 ];
 
 export const Header = () => {
   const location = useLocation();
-  const isHomeDisplaying = location.pathname === "/";
+  const isHomeDisplaying = location.pathname === LINKS.home;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (

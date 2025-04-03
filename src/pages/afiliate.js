@@ -3,6 +3,7 @@ import { SEO as Seo } from "../components/seo";
 import { Link } from "../components/link";
 import { ExternalLink } from "../components/externalLink";
 import { Layout } from "../components/layout";
+import { LINKS } from "../components/header";
 
 const features = [
   {
@@ -51,7 +52,7 @@ const features = [
     description: (
       <>
         Contactando directamente con nuestro{" "}
-        <Link href="/contactanos" className="font-semibold hover:underline">
+        <Link href={LINKS.contactUs} className="font-semibold hover:underline">
           Departamento de Servicios al Cliente
         </Link>{" "}
         en donde le brindaremos la mejor atención.

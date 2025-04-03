@@ -9,6 +9,7 @@ import Provider2Logo from "../images/provider-2-logo.png";
 import Provider3Logo from "../images/provider-3-logo.png";
 import Provider4Logo from "../images/provider-4-logo.png";
 import Provider5Logo from "../images/provider-5-logo.png";
+import { LINKS } from "../components/header";
 
 const tiers = [
   {
@@ -49,7 +50,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <main>
-        <div
+        <section
           id="home"
           className="relative isolate px-6 pt-4 md:pt-32 lg:px-8 bg-zinc-50 bg-hero2 bg-bottom bg-cover bg-no-repeat"
         >
@@ -77,7 +78,7 @@ const IndexPage = () => {
                 los estándares mas altos de calidad en sus areas a fines.
               </p>
               <div className="mt-10 flex items-center justify-left md:justify-center gap-x-6">
-                <Button href="/afiliate">Afiliate con nosotros</Button>
+                <Button href={LINKS.register}>Afiliate con nosotros</Button>
               </div>
             </div>
             <div className="bg-white h-fit p-[1rem] rounded-xl shadow-lg hidden md:block md:mt-12">
@@ -96,9 +97,9 @@ const IndexPage = () => {
               }}
             ></div>
           </div>
-        </div>
+        </section>
 
-        <div id="providers" className="bg-white py-24 sm:py-32">
+        <section id="providers" className="bg-white py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 className="text-center text-base/7 font-semibold text-blue-600">
               Prestadoras de Servicios de Salud
@@ -141,14 +142,14 @@ const IndexPage = () => {
               />
             </div>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button href="/prestadoras" className="rpx-3.5 py-2.5">
+              <Button href={LINKS.providers} className="rpx-3.5 py-2.5">
                 Ver todos
               </Button>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div
+        <section
           id="plans"
           className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8"
         >
@@ -370,9 +371,9 @@ const IndexPage = () => {
               </div>
             ))}
           </div>
-        </div>
+        </section>
 
-        <div
+        <section
           id="health"
           className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0"
         >
@@ -578,7 +579,70 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        <section class="py-24 bg-white">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col justify-center items-center gap-x-16 gap-y-5 xl:gap-28 lg:flex-row lg:justify-between max-lg:max-w-2xl mx-auto max-w-full">
+              <div class="w-full lg:w-1/2">
+                <img
+                  src="https://pagedone.io/asset/uploads/1696230182.png"
+                  alt=""
+                  class="w-full rounded-xl object-cover shadow-xl ring-gray-400/10"
+                />
+              </div>
+              <div class="w-full lg:w-1/2">
+                <div class="lg:max-w-xl">
+                  <div class="mb-6 lg:mb-16">
+                    <h6 class="text-lg text-center font-medium text-blue-600 mb-2 lg:text-left">
+                      Preguntas frecuentas
+                    </h6>
+                    <h2 class="text-4xl text-center font-bold text-gray-900 leading-[3.25rem] mb-5 lg:text-left">
+                      ¿Tienes algunas dudas?
+                    </h2>
+                  </div>
+                  <div>
+                    <div class="pb-8 border-b border-solid border-gray-200">
+                      <h5 className="text-base font-semibold text-gray-800">
+                        ¿Por qué escoger una compañía y no otra?
+                      </h5>
+                      <p class="text-base font-normal text-gray-600 ">
+                        Ya que contratar un seguro médico se hace pensando en el
+                        medio y largo plazo, asegúrate que la compañía tiene
+                        prestigio y demostrada experiencia.
+                      </p>
+                    </div>
+                    <div class="py-8 border-b border-solid border-gray-200">
+                      <h5 className="text-base font-semibold text-gray-800">
+                        ¿Podré elegir el especialista que necesito?
+                      </h5>
+                      <p class="text-base font-normal text-gray-600 ">
+                        La base de un seguro médico está en la libre elección de
+                        tu médico, ya sea del cuadro médico propio o bien a
+                        través de un producto de reembolso, que te permite
+                        también ir a cualquier médico del mundo.
+                      </p>
+                    </div>
+                    <div class="py-8">
+                      <h5 className="text-base font-semibold text-gray-800">
+                        ¿Podré acceder directamente a todas las coberturas?
+                      </h5>
+                      <p class="text-base font-normal text-gray-600 ">
+                        Previamente a contratar tu seguro médico, consulta si
+                        contempla períodos de espera.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex justify-center">
+                    <Button href={LINKS.faqs}>
+                      Ver todas las preguntas frecuentes
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </Layout>
   );

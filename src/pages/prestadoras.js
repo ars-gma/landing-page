@@ -157,8 +157,7 @@ const ProvidersPage = () => {
       setTypes([...new Set(providers.map((item) => item.type))]);
       setCities([...new Set(providers.map((item) => item.city))]);
     }
-    // getProviders();
-  }, [providers]);
+  }, []);
 
   useEffect(() => {
     if (filterText.length > 1) {
@@ -173,11 +172,18 @@ const ProvidersPage = () => {
           ? filteredList.length
           : currentPage * PAGINATION;
       const start = end > PAGINATION - 1 ? Math.abs(end - (PAGINATION - 1)) : 1;
-      setStartPagination(start);
-      setEndPagination(end);
-      setList(filteredList.slice(start, end + 1));
-      setPages(parseInt(Math.ceil(filteredList.length / PAGINATION)));
-      setTotalPagination(filteredList.length);
+      if (filteredList.length > 1) {
+        setStartPagination(start);
+        setEndPagination(end);
+        setList(filteredList.slice(start, end + 1));
+        setPages(parseInt(Math.ceil(filteredList.length / PAGINATION)));
+        setTotalPagination(filteredList.length);
+      } else {
+        setStartPagination(null);
+        setEndPagination(null);
+        setTotalPagination(null);
+        setList([]);
+      }
     } else {
       const end =
         currentPage * PAGINATION > providers.length
@@ -234,131 +240,168 @@ const ProvidersPage = () => {
               />
             </div>
           </form>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 h-full w-full">
-            {list.map((item) => (
-              <div
-                key={item.key}
-                className="group relative cursor-pointer overflow-hidden bg-white shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl max-w-sm p-6 border border-gray-200 rounded-lg"
-              >
-                <Link
-                  href={`tel:${item.phone}`}
-                  className="transition duration-500 hover:scale-125"
+          {list.length === 0 ? (
+            <div className="flex justify-center mt-2">
+              <h5 className="text-lg font-normal tracking-tight text-gray-900">
+                Lo sentimos, no pudimos encontrar lo que buscas con la
+                información suministrada.
+              </h5>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 h-full w-full">
+              {list.map((item) => (
+                <div
+                  key={item.key}
+                  className="group relative cursor-pointer overflow-hidden bg-white shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl max-w-sm p-6 border border-gray-200 rounded-lg"
                 >
-                  {getIconByType(item.type)}
-                  <h5 className="mb-1 text-xl font-semibold tracking-tight text-gray-900">
-                    {item.title}
-                  </h5>
-                  <p className="font-lg text-gray-500">{item.type}</p>
-                  <p className="mb-3 font-normal text-gray-400">{item.city}</p>
-                  <div className="flex flex-row items-center font-medium text-gray-500">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="size-4 mr-2"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
-                      />
-                    </svg>
-                    {item.phone}
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </div>
-          <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6 mt-8">
-            <div className="flex flex-1 justify-between sm:hidden">
-              <Link
-                onClick={onPreviousClick}
-                className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
-              >
-                Anterior
-              </Link>
-              <Link
-                onClick={onNextClick}
-                className="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
-              >
-                Siguiente
-              </Link>
-            </div>
-            <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
-              <div>
-                <p className="text-sm text-gray-700">
-                  Mostrando
-                  <span className="font-medium"> {startPagination} </span>a
-                  <span className="font-medium"> {endPagination} </span>
-                  de
-                  <span className="font-medium"> {totalPagination} </span>
-                  resultados
-                </p>
-              </div>
-              {pages > 1 && (
-                <div>
-                  <nav
-                    className="isolate inline-flex -space-x-px rounded-md shadow-xs"
-                    aria-label="Paginación"
+                  <Link
+                    href={`tel:${item.phone}`}
+                    className="transition duration-500 hover:scale-125"
                   >
-                    <Link
-                      onClick={onPreviousClick}
-                      className="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-                    >
-                      <span className="sr-only">Anterior</span>
+                    {getIconByType(item.type)}
+                    <h5 className="mb-1 text-xl font-semibold tracking-tight text-gray-900">
+                      {item.title}
+                    </h5>
+                    <p className="font-lg text-gray-500">{item.type}</p>
+                    <p className="mb-3 font-normal text-gray-400">
+                      {item.city}
+                    </p>
+                    <div className="flex flex-row items-center font-medium text-gray-500">
                       <svg
-                        className="size-5"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                        data-slot="icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="size-4 mr-2"
                       >
                         <path
-                          fillRule="evenodd"
-                          d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z"
-                          clipRule="evenodd"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
                         />
                       </svg>
-                    </Link>
-                    {Array.from({ length: pages }).map((_, index) => (
-                      <Link
-                        key={`link_${index}`}
-                        onClick={() => goToPage(index + 1)}
-                        aria-current={currentPage === index + 1 && "page"}
-                        className={classNames(
-                          currentPage === index + 1 &&
-                            "bg-blue-600 text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600",
-                          "relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-                        )}
-                      >
-                        {index + 1}
-                      </Link>
-                    ))}
-                    <Link
-                      onClick={onNextClick}
-                      className="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-                    >
-                      <span className="sr-only">Siguiente</span>
-                      <svg
-                        className="size-5"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                        data-slot="icon"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </Link>
-                  </nav>
+                      {item.phone}
+                    </div>
+                  </Link>
                 </div>
-              )}
+              ))}
             </div>
+          )}
+          <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6 mt-8">
+            {pages > 1 && (
+              <div className="flex flex-1 justify-between sm:hidden">
+                {currentPage !== 1 && (
+                  <Link
+                    onClick={onPreviousClick}
+                    className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                  >
+                    Anterior
+                  </Link>
+                )}
+                {startPagination && endPagination && totalPagination && (
+                  <div>
+                    <p className="text-xs text-center text-gray-700">
+                      Mostrando
+                      <span className="font-medium"> {startPagination} </span>a
+                      <span className="font-medium"> {endPagination} </span>
+                      de
+                      <span className="font-medium"> {totalPagination} </span>
+                      resultados
+                    </p>
+                  </div>
+                )}
+                {currentPage !==
+                  parseInt(Math.ceil(totalPagination / PAGINATION)) && (
+                  <Link
+                    onClick={onNextClick}
+                    className="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                  >
+                    Siguiente
+                  </Link>
+                )}
+              </div>
+            )}
+            {startPagination && endPagination && totalPagination && (
+              <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+                <div>
+                  <p className="text-sm text-gray-700">
+                    Mostrando
+                    <span className="font-medium"> {startPagination} </span>a
+                    <span className="font-medium"> {endPagination} </span>
+                    de
+                    <span className="font-medium"> {totalPagination} </span>
+                    resultados
+                  </p>
+                </div>
+                {pages > 1 && (
+                  <div>
+                    <nav
+                      className="isolate inline-flex -space-x-px rounded-md shadow-xs"
+                      aria-label="Paginación"
+                    >
+                      {currentPage !== 1 && (
+                        <Link
+                          onClick={onPreviousClick}
+                          className="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+                        >
+                          <span className="sr-only">Anterior</span>
+                          <svg
+                            className="size-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                            data-slot="icon"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </Link>
+                      )}
+                      {Array.from({ length: pages }).map((_, index) => (
+                        <Link
+                          key={`link_${index}`}
+                          onClick={() => goToPage(index + 1)}
+                          aria-current={currentPage === index + 1 && "page"}
+                          className={classNames(
+                            currentPage === index + 1 &&
+                              "bg-blue-600 text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600",
+                            "relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+                          )}
+                        >
+                          {index + 1}
+                        </Link>
+                      ))}
+                      {currentPage !==
+                        parseInt(Math.ceil(totalPagination / PAGINATION)) && (
+                        <Link
+                          onClick={onNextClick}
+                          className="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+                        >
+                          <span className="sr-only">Siguiente</span>
+                          <svg
+                            className="size-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                            data-slot="icon"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </Link>
+                      )}
+                    </nav>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </main>

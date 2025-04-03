@@ -2,6 +2,7 @@ import * as React from "react";
 import { SEO as Seo } from "../components/seo";
 import { ExternalLink } from "../components/externalLink";
 import { Layout } from "../components/layout";
+import { LINKS } from "../components/header";
 
 const FaqsPage = () => {
   return (
@@ -12,8 +13,11 @@ const FaqsPage = () => {
             Preguntas frecuentes
           </h1>
           <h4 className="mt-2 text-pretty text-2xl text-gray-500">
-            Si no encuentras la respuesta que necesitas, no dudes en comunicarte
-            con nosotros.
+            Si no encuentras la respuesta que necesitas, no dudes en{" "}
+            <a href={LINKS.contactUs} className="font-semibold">
+              comunicarte con nosotros
+            </a>
+            .
           </h4>
         </div>
         <div className="grid pt-8 text-left border-t border-gray-200 md:gap-4 md:grid-cols-3">
@@ -378,23 +382,33 @@ const FaqsPage = () => {
                 <br />
                 Consulta tu estatus en la Tesorería de la Seguridad Social (TSS)
                 y confirma que cumples con las condiciones para realizar el
-                traspaso,{" "}
+                traspaso.{" "}
                 <ExternalLink href="https://suir.gob.do/Login.aspx?ReturnUrl=%2f">
-                  verificate
+                  Verificate
                 </ExternalLink>
-                .
                 <br />
-                <br />
-                Importante tener en cuenta
-                <br />• La solicitud de traspaso deberá realizarla el titular
-                del núcleo familiar.
-                <br />• Toda solicitud de traspaso implicará el titular y de
-                todos sus dependientes.
-                <br />• Podrás cambiar de ARS una vez por año, siempre que
-                cumpla los procedimientos. • No ser Afiliados de una ARS de
-                Autogestion.
-                <br />• Hasta no culminar el proceso seguira recibiendo servicos
-                de su ARS actual.
+                <strong className="font-bold">
+                  Importante tener en cuenta
+                </strong>
+                <ul className="space-y-1 list-disc list-inside">
+                  <li>
+                    La solicitud de traspaso deberá realizarla el titular del
+                    núcleo familiar.
+                  </li>
+                  <li>
+                    Toda solicitud de traspaso implicará el titular y de todos
+                    sus dependientes.
+                  </li>
+                  <li>
+                    Podrás cambiar de ARS una vez por año, siempre que cumpla
+                    los procedimientos.
+                  </li>
+                  <li>No ser Afiliados de una ARS de Autogestion.</li>
+                  <li>
+                    Hasta no culminar el proceso seguira recibiendo servicos de
+                    su ARS actual.
+                  </li>
+                </ul>
               </p>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { SEO as Seo } from "../components/seo";
 import { Layout } from "../components/layout";
+import { LINKS } from "../components/header";
 
 const NotFoundPage = () => {
   return (
@@ -18,13 +19,13 @@ const NotFoundPage = () => {
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
-              href="/#home"
+              href={LINKS.homeHero}
               className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
               Volver al inicio
             </a>
             <a
-              href="/contactanos"
+              href={LINKS.contactUs}
               className="text-sm font-semibold text-gray-900"
             >
               Contactenos <span aria-hidden="true">&rarr;</span>

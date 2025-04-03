@@ -1,6 +1,7 @@
 import React from "react";
 
 import Logo from "../images/logo.png";
+import { LINKS } from "./header";
 
 export const Footer = () => {
   return (
@@ -8,7 +9,7 @@ export const Footer = () => {
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between md:py-8">
           <div className="mb-6 md:mb-0">
-            <a href="/#home" className="flex items-center">
+            <a href={LINKS.homeHero} className="flex items-center">
               <img src={Logo} className="h-12 me-3" alt="ARS GMS logo" />
             </a>
           </div>
@@ -19,22 +20,22 @@ export const Footer = () => {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="/afiliate" className="hover:text-white">
+                  <a href={LINKS.register} className="hover:text-white">
                     Afíliate
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="/#plans" className="hover:text-white">
+                  <a href={LINKS.plans} className="hover:text-white">
                     Planes
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="/prestadoras" className="hover:text-white">
+                  <a href={LINKS.providers} className="hover:text-white">
                     Prestadoras
                   </a>
                 </li>
                 <li>
-                  <a href="/preguntas-frecuentes" className="hover:text-white">
+                  <a href={LINKS.faqs} className="hover:text-white">
                     Preguntas frecuentes
                   </a>
                 </li>
@@ -126,6 +127,8 @@ export const Footer = () => {
                 <li className="mb-4">
                   <a
                     href="http://www.arsgma.com/files/Ley87-01.pdf"
+                    target="_blank"
+                    rel="noreferrer noopener"
                     className="hover:text-white"
                   >
                     Sistema Dominicano de Seguridad Social
@@ -134,6 +137,8 @@ export const Footer = () => {
                 <li className="mb-4">
                   <a
                     href="http://www.arsgma.com/files/LeyNo.42-00.pdf"
+                    target="_blank"
+                    rel="noreferrer noopener"
                     className="hover:text-white"
                   >
                     Ley General Sobre la Discapacidad
@@ -142,6 +147,8 @@ export const Footer = () => {
                 <li className="mb-4">
                   <a
                     href="http://www.arsgma.com/files/Ley50-88SobreDrogas.pdf"
+                    target="_blank"
+                    rel="noreferrer noopener"
                     className="hover:text-white"
                   >
                     Ley Sobre Drogas y Sustancias Controladas
@@ -150,6 +157,8 @@ export const Footer = () => {
                 <li className="mb-4">
                   <a
                     href="http://www.arsgma.com/files/Ley42-01.pdf"
+                    target="_blank"
+                    rel="noreferrer noopener"
                     className="hover:text-white"
                   >
                     Ley General de Salud
@@ -158,6 +167,8 @@ export const Footer = () => {
                 <li>
                   <a
                     href="http://www.arsgma.com/files/Ley_No_177-09.pdf"
+                    target="_blank"
+                    rel="noreferrer noopener"
                     className="hover:text-white"
                   >
                     Ley de Amnistia
@@ -170,7 +181,7 @@ export const Footer = () => {
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2009 <a href="/">ARS GMA</a>. Todos los Derechos Reservados.
+            © 2009 <a href={LINKS.home}>ARS GMA</a>. Todos los Derechos Reservados.
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             <a
