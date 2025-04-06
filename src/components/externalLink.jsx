@@ -13,8 +13,12 @@ export const ExternalLink = ({
       href={href}
       onClick={onClick}
       target={target}
-      className={classNames("cursor-pointer text-blue-500 hover:text-blue-700 hover:underline decoration-blue-600", className)}
+      className={classNames(
+        "cursor-pointer text-blue-500 hover:text-blue-700 hover:underline decoration-blue-600",
+        className
+      )}
       rel="noopener noreferrer"
+      download
     >
       <span className="flex flex-row items-center">
         {children}

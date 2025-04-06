@@ -45,6 +45,7 @@ export const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white"
+                    download
                   >
                     Guía médica
                   </a>
@@ -55,6 +56,7 @@ export const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white"
+                    download
                   >
                     Solicitud de reembolso
                   </a>
@@ -152,6 +154,7 @@ export const Footer = () => {
                     target="_blank"
                     rel="noreferrer noopener"
                     className="hover:text-white"
+                    download
                   >
                     Sistema Dominicano de Seguridad Social
                   </a>
@@ -162,6 +165,7 @@ export const Footer = () => {
                     target="_blank"
                     rel="noreferrer noopener"
                     className="hover:text-white"
+                    download
                   >
                     Ley General Sobre la Discapacidad
                   </a>
@@ -172,6 +176,7 @@ export const Footer = () => {
                     target="_blank"
                     rel="noreferrer noopener"
                     className="hover:text-white"
+                    download
                   >
                     Ley Sobre Drogas y Sustancias Controladas
                   </a>
@@ -182,6 +187,7 @@ export const Footer = () => {
                     target="_blank"
                     rel="noreferrer noopener"
                     className="hover:text-white"
+                    download
                   >
                     Ley General de Salud
                   </a>
@@ -192,6 +198,7 @@ export const Footer = () => {
                     target="_blank"
                     rel="noreferrer noopener"
                     className="hover:text-white"
+                    download
                   >
                     Ley de Amnistia
                   </a>
