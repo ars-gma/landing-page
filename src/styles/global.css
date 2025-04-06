@@ -5,9 +5,45 @@
 html,
 body {
   font-family: "Lato", sans-serif;
-  background-color: #fafafa;
+  /* background-color: #FAFBFF; */
+  background: rgb(250, 251, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(250, 251, 255, 1) 0%,
+    rgba(247, 248, 250, 1) 35%,
+    rgba(249, 249, 249, 1) 100%
+  );
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.animation-pulse {
+  animation: pulse 2s infinite;
+}
+
+.animation-sideToSide {
+  animation: sideToSide 3s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #2463eb;
+  }
+
+  50% {
+    box-shadow: 0 0 0 20px rgba(229, 62, 62, 0);
+  }
+}
+
+@keyframes sideToSide {
+  0%, 100% {
+    transform: translateX(45%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
 }

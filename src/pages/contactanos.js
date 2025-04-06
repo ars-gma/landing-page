@@ -6,7 +6,6 @@ import { Layout } from "../components/layout";
 const ContactUsPage = () => {
   return (
     <Layout>
-      {/* px-6 2 md:px-[12rem] lg:px-[16rem] */}
       <main className="grid min-h-full place-items-center py-24 px-6 sm:py-32 md:px-[4rem] lg:px-[16rem]">
         <div className="mt-16 md:mt-4 mb-8">
           <h1 className="text-pretty text-5xl font-black">Comunicate</h1>
@@ -36,21 +35,27 @@ const ContactUsPage = () => {
                 <p className="text-sm font-semibold text-pretty mt-1">
                   Oficina principal
                 </p>
-                <Link href="tel:8096854620" className="hover:text-blue-600">
-                  Tel. 8096854620
+                <Link
+                  href="tel:8096854620"
+                  className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                >
+                  809.685.4620
                 </Link>
                 <p className="text-sm font-semibold text-pretty mt-1">
                   Desde el interior
                 </p>
-                <Link href="tel:8092000761" className="hover:text-blue-600">
-                  Tel. 8092000761
+                <Link
+                  href="tel:8092000761"
+                  className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                >
+                  809.200.0761
                 </Link>
               </div>
               <div className="mt-3">
                 <p className="text-lg font-semibold text-pretty">Soporte</p>
                 <Link
                   href="mailto:correo@arsgma.com"
-                  className="hover:text-blue-600"
+                  className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
                 >
                   correo@arsgma.com
                 </Link>
@@ -65,8 +70,11 @@ const ContactUsPage = () => {
                 <p className="text-sm font-light italic text-pretty">
                   Calle B #2, Matas
                 </p>
-                <Link href="tel:8097461488" className="hover:text-blue-600">
-                  Tel. 8097461488
+                <Link
+                  href="tel:8097461488"
+                  className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                >
+                  809.746.1488
                 </Link>
               </div>
               <div className="mt-3">
@@ -76,8 +84,11 @@ const ContactUsPage = () => {
                 <p className="text-sm font-light italic text-pretty">
                   Calle C #3, Matas
                 </p>
-                <Link href="tel:8095278207" className="hover:text-blue-600">
-                  Tel. 8095278207
+                <Link
+                  href="tel:8095278207"
+                  className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                >
+                  809.527.8207
                 </Link>
               </div>
             </div>

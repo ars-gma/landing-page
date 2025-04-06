@@ -34,9 +34,29 @@ export const Footer = () => {
                     Prestadoras
                   </a>
                 </li>
-                <li>
+                <li className="mb-4">
                   <a href={LINKS.faqs} className="hover:text-white">
                     Preguntas frecuentes
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    href="http://www.arsgma.com/files/Guia_Medica.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white"
+                  >
+                    Guía médica
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://www.arsgma.com/files/FormularioUnico_Solicitud_Reembolso.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white"
+                  >
+                    Solicitud de reembolso
                   </a>
                 </li>
               </ul>
@@ -47,7 +67,10 @@ export const Footer = () => {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="tel:8096854620" className="flex flex-row items-center mt-2 hover:text-white">
+                  <a
+                    href="tel:8096854620"
+                    className="flex flex-row items-center mt-2 hover:text-white"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -62,15 +85,14 @@ export const Footer = () => {
                         d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
                       />
                     </svg>
-                      8096854620
-                    </a>
+                    809.685.4620
+                  </a>
                 </li>
                 <li className="mb-4">
-
-<a
-  href="mailto:correo@arsgma.com?subject=ARS GMA"
-  className="flex flex-row items-center mt-2 hover:text-white"
->
+                  <a
+                    href="mailto:correo@arsgma.com?subject=ARS GMA"
+                    className="flex flex-row items-center mt-2 hover:text-white"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -85,8 +107,8 @@ export const Footer = () => {
                         d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
                       />
                     </svg>
-                      correo@arsgma.com
-                    </a>
+                    correo@arsgma.com
+                  </a>
                 </li>
                 <li>
                   <a
@@ -181,7 +203,8 @@ export const Footer = () => {
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center">
-            © 2009 <a href={LINKS.home}>ARS GMA</a>. Todos los Derechos Reservados.
+            © 2009 <a href={LINKS.home}>ARS GMA</a>. Todos los Derechos
+            Reservados.
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             <a

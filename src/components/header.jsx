@@ -37,7 +37,7 @@ export const Header = () => {
       <header
         className={`${
           isHomeDisplaying ? "fixed" : "absolute"
-        } bg-white border inset-x-0 top-0 z-50 max-w-[95%] md:max-w-[85%] m-auto mt-[1rem] rounded-[3rem] shadow-md`}
+        } bg-white border inset-x-0 top-0 z-50 max-w-[95%] sm:max-w-[85%] m-auto mt-[1rem] rounded-[3rem] shadow-md`}
       >
         <nav
           aria-label="Global"
@@ -49,7 +49,7 @@ export const Header = () => {
               <img alt="" src={Logo} className="h-12 w-auto" />
             </a>
           </div>
-          <div className="flex lg:hidden">
+          <div className="flex md:hidden">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
@@ -72,7 +72,7 @@ export const Header = () => {
               </svg>
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12 items-center">
+          <div className="hidden md:flex md:gap-x-12 items-center">
             {navigation.map((item, index) => (
               <a
                 key={item.name}

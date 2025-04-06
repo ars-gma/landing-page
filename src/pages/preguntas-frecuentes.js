@@ -1,6 +1,7 @@
 import * as React from "react";
 import { SEO as Seo } from "../components/seo";
 import { ExternalLink } from "../components/externalLink";
+import { Link } from "../components/link";
 import { Layout } from "../components/layout";
 import { LINKS } from "../components/header";
 
@@ -14,9 +15,12 @@ const FaqsPage = () => {
           </h1>
           <h4 className="mt-2 text-pretty text-2xl text-gray-500">
             Si no encuentras la respuesta que necesitas, no dudes en{" "}
-            <a href={LINKS.contactUs} className="font-semibold">
+            <Link
+              href={LINKS.contactUs}
+              className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+            >
               comunicarte con nosotros
-            </a>
+            </Link>
             .
           </h4>
         </div>
