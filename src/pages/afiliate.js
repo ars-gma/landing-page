@@ -18,14 +18,11 @@ const features = [
         formularios de afiliación y enviarnoslo via fax.
         <br />
         <br />
-        <ExternalLink
-          className="table-cell"
-          href="http://www.arsgma.com/files/F005_GMA.pdf"
-        >
+        <ExternalLink className="table-cell" href={"/solicitud_afiliacion.pdf"}>
           Formulario para titulares
         </ExternalLink>
         <br />
-        <ExternalLink href="http://www.arsgma.com/files/F006_GMA.pdf">
+        <ExternalLink href={"/solicitud_dependientes.pdf"}>
           Formulario para dependientes
         </ExternalLink>
       </>

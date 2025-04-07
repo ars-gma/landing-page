@@ -41,7 +41,7 @@ export const Footer = () => {
                 </li>
                 <li className="mb-4">
                   <a
-                    href="http://www.arsgma.com/files/Guia_Medica.pdf"
+                    href={"/guia_medica.pdf"}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white"
@@ -52,7 +52,7 @@ export const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="http://www.arsgma.com/files/FormularioUnico_Solicitud_Reembolso.pdf"
+                    href={"/solicitud_reembolso.pdf"}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white"
@@ -150,7 +150,7 @@ export const Footer = () => {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a
-                    href="http://www.arsgma.com/files/Ley87-01.pdf"
+                    href={"/ley87-01.pdf"}
                     target="_blank"
                     rel="noreferrer noopener"
                     className="hover:text-white"
@@ -161,7 +161,7 @@ export const Footer = () => {
                 </li>
                 <li className="mb-4">
                   <a
-                    href="http://www.arsgma.com/files/LeyNo.42-00.pdf"
+                    href={"/ley42-00.pdf"}
                     target="_blank"
                     rel="noreferrer noopener"
                     className="hover:text-white"
@@ -172,7 +172,7 @@ export const Footer = () => {
                 </li>
                 <li className="mb-4">
                   <a
-                    href="http://www.arsgma.com/files/Ley50-88SobreDrogas.pdf"
+                    href={"/ley50-88.pdf"}
                     target="_blank"
                     rel="noreferrer noopener"
                     className="hover:text-white"
@@ -183,7 +183,7 @@ export const Footer = () => {
                 </li>
                 <li className="mb-4">
                   <a
-                    href="http://www.arsgma.com/files/Ley42-01.pdf"
+                    href={"/ley42-01.pdf"}
                     target="_blank"
                     rel="noreferrer noopener"
                     className="hover:text-white"
@@ -194,7 +194,7 @@ export const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="http://www.arsgma.com/files/Ley_No_177-09.pdf"
+                    href={"/ley177-09.pdf"}
                     target="_blank"
                     rel="noreferrer noopener"
                     className="hover:text-white"
