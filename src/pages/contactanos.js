@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import { SEO as Seo } from "../components/seo";
@@ -6,11 +6,17 @@ import { Link } from "../components/link";
 import { Layout } from "../components/layout";
 
 const ContactUsPage = () => {
+  const [showSuccessAlert, setSuccessShowAlert] = useState(false);
+  const [showErrorAlert, setErrorhowAlert] = useState(false);
+  const [loading, setLoading] = useState(false);
   const form = useRef();
 
   const sendEmail = async (e) => {
     e.preventDefault();
 
+    setSuccessShowAlert(false);
+    setErrorhowAlert(false);
+    setLoading(true);
     try {
       emailjs.sendForm(
         process.env.GATSBY_EMAILJS_SERVICE_ID,
@@ -20,14 +26,109 @@ const ContactUsPage = () => {
           publicKey: process.env.GATSBY_EMAILJS_PUBLIC_KEY,
         }
       );
+      setSuccessShowAlert(true);
+      document.getElementById("alert-success").focus();
     } catch (error) {
-      // TODO remove
-      console.log("FAILED...", error.text);
+      setErrorhowAlert(true);
+      document.getElementById("alert-error").focus();
+    } finally {
+      setLoading(false);
     }
   };
   return (
     <Layout>
       <main className="grid min-h-full place-items-center py-24 px-6 sm:py-32 md:px-[4rem] lg:px-[16rem]">
+        <div
+          id="alert-error"
+          class={`${
+            showErrorAlert ? "visible" : "hidden"
+          } absolute top-[9rem] flex items-center p-4 mb-4 text-red-800 rounded-lg bg-red-50`}
+          role="alert"
+        >
+          <svg
+            class="shrink-0 w-4 h-4"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+          </svg>
+          <span class="sr-only">Informativo</span>
+          <div class="ms-3 text-sm font-medium">
+            Hubo un problema enviando el mensaje, si el problema sigue
+            ocurriendo favor de comunicarse por teléfono o correo electrónico.
+          </div>
+          <button
+            type="button"
+            class="ms-auto -mx-1.5 -my-1.5 bg-red-50 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 inline-flex items-center justify-center h-8 w-8"
+            data-dismiss-target="#alert-2"
+            aria-label="Cerrar"
+            onClick={() => setErrorhowAlert(false)}
+          >
+            <span class="sr-only">Cerrar</span>
+            <svg
+              class="w-3 h-3"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          id="alert-success"
+          class={`${
+            showSuccessAlert ? "visible" : "hidden"
+          } flex absolute top-[9rem] items-center p-4 mb-4 text-green-800 rounded-lg bg-green-50`}
+          role="alert"
+        >
+          <svg
+            class="shrink-0 w-4 h-4"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+          </svg>
+          <span class="sr-only">Informativo</span>
+          <div class="ms-3 text-sm font-medium">
+            Se ha enviado tu mensaje, te estaremos contactando proximamente.
+          </div>
+          <button
+            type="button"
+            class="ms-auto -mx-1.5 -my-1.5 bg-green-50 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex items-center justify-center h-8 w-8"
+            data-dismiss-target="#alert-3"
+            aria-label="Cerrar"
+            onClick={() => setSuccessShowAlert(false)}
+          >
+            <span class="sr-only">Cerrar</span>
+            <svg
+              class="w-3 h-3"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+              />
+            </svg>
+          </button>
+        </div>
         <div className="mt-16 md:mt-4 mb-8">
           <h1 className="text-pretty text-5xl font-black">Comunicate</h1>
         </div>
@@ -129,6 +230,7 @@ const ContactUsPage = () => {
                   </label>
                   <div className="mt-2.5">
                     <input
+                      required
                       id="name"
                       name="user_name"
                       type="text"
@@ -146,6 +248,7 @@ const ContactUsPage = () => {
                   </label>
                   <div className="mt-2.5">
                     <input
+                      required
                       id="taxId"
                       name="user_tax_id"
                       type="text"
@@ -163,6 +266,7 @@ const ContactUsPage = () => {
                   </label>
                   <div className="mt-2.5">
                     <input
+                      required
                       id="email"
                       name="user_email"
                       type="email"
@@ -199,6 +303,7 @@ const ContactUsPage = () => {
                   </label>
                   <div className="mt-2.5">
                     <textarea
+                      required
                       id="message"
                       name="user_message"
                       rows={4}
@@ -211,6 +316,7 @@ const ContactUsPage = () => {
               <div className="mt-10">
                 <button
                   type="submit"
+                  disabled={loading}
                   className="block rounded-md bg-blue-600 px-12 py-4 text-center text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                 >
                   Hablemos
