@@ -1,9 +1,30 @@
-import * as React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
 import { SEO as Seo } from "../components/seo";
 import { Link } from "../components/link";
 import { Layout } from "../components/layout";
 
 const ContactUsPage = () => {
+  const form = useRef();
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    try {
+      emailjs.sendForm(
+        process.env.GATSBY_EMAILJS_SERVICE_ID,
+        process.env.GATSBY_EMAILJS_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: process.env.GATSBY_EMAILJS_PUBLIC_KEY,
+        }
+      );
+    } catch (error) {
+      // TODO remove
+      console.log("FAILED...", error.text);
+    }
+  };
   return (
     <Layout>
       <main className="grid min-h-full place-items-center py-24 px-6 sm:py-32 md:px-[4rem] lg:px-[16rem]">
@@ -97,7 +118,7 @@ const ContactUsPage = () => {
             <h1 className="text-balance text-4xl font-black mt-8">
               ¿Aún necesitas ayuda?
             </h1>
-            <form action="#" method="POST" className="mx-auto mt-4">
+            <form ref={form} onSubmit={sendEmail} className="mx-auto mt-4">
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 w-full">
                 <div className="sm:col-span-2">
                   <label
@@ -109,7 +130,7 @@ const ContactUsPage = () => {
                   <div className="mt-2.5">
                     <input
                       id="name"
-                      name="name"
+                      name="user_name"
                       type="text"
                       placeholder="Jose Perez"
                       className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 border outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600"
@@ -126,7 +147,7 @@ const ContactUsPage = () => {
                   <div className="mt-2.5">
                     <input
                       id="taxId"
-                      name="taxId"
+                      name="user_tax_id"
                       type="text"
                       placeholder="001-1234567-8"
                       className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 border outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600"
@@ -143,7 +164,7 @@ const ContactUsPage = () => {
                   <div className="mt-2.5">
                     <input
                       id="email"
-                      name="email"
+                      name="user_email"
                       type="email"
                       placeholder="jose.perez@gmail.com"
                       className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 border outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600"
@@ -161,7 +182,7 @@ const ContactUsPage = () => {
                     <div className="flex rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-blue-600">
                       <input
                         id="phone-number"
-                        name="phone-number"
+                        name="user_phone"
                         type="text"
                         placeholder="8091234567"
                         className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 border outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600"
@@ -179,10 +200,10 @@ const ContactUsPage = () => {
                   <div className="mt-2.5">
                     <textarea
                       id="message"
-                      name="message"
+                      name="user_message"
                       rows={4}
-                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 border outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600"
                       placeholder="Dejanos saber tus dudas o preguntas."
+                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 border outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600"
                     />
                   </div>
                 </div>
