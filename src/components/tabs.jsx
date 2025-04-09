@@ -10,8 +10,8 @@ export const Tabs = ({ data, activeTabIndex, onClick }) => {
               key={tab.key}
               className={`py-2 border-b-4 transition-colors duration-300 mx-[1rem] md:mx-[2rem] ${
                 tab.key === activeTabIndex
-                  ? "border-blue-500 text-blue-600"
-                  : "border-transparent hover:border-blue-200"
+                  ? "border-primary text-primary"
+                  : "border-transparent hover:border-secondary"
               }`}
               onClick={() => onClick(tab.key)}
             >

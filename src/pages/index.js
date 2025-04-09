@@ -208,19 +208,19 @@ const IndexPage = () => {
             decoding="async"
             src="https://www.arsfuturo.com/wp-content/plugins/webteck-core/assets/img/shape/shape_2.png"
             alt=""
-            className="invisible sm:visible absolute top-[10rem] left-[20%] z-[-1] animate-[spin_15s_infinite]"
+            className="hidden sm:block absolute top-[10rem] left-[20%] z-[-1] animate-[spin_15s_infinite]"
           />
           <img
             decoding="async"
             src="https://www.arsfuturo.com/wp-content/plugins/webteck-core/assets/img/shape/shape_3.png"
             alt=""
-            className="invisible sm:visible absolute top-[42rem] left-[40%] z-[-1] animation-sideToSide"
+            className="hidden sm:block absolute top-[42rem] left-[40%] z-[-1] animation-sideToSide"
           />
           <img
             decoding="async"
             src="https://www.arsfuturo.com/wp-content/plugins/webteck-core/assets/img/shape/hero-shape2.png"
             alt=""
-            className="invisible sm:visible absolute top-[12rem] left-[60%] z-[-1] animate-[bounce_3s_infinite]"
+            className="hidden sm:block absolute top-[12rem] left-[60%] z-[-1] animate-[bounce_3s_infinite]"
           />
           <div
             className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -248,7 +248,7 @@ const IndexPage = () => {
               <div className="mt-10 flex items-center justify-left gap-x-6">
                 <Button
                   href={LINKS.register}
-                  className="animation-pulse transition-discrete"
+                  className="animation-pulse transition-discrete bg-gradient2"
                 >
                   Afiliate con nosotros
                 </Button>
@@ -322,9 +322,68 @@ const IndexPage = () => {
           </div>
         </section>
 
+        <section id="stats" class="px-3 lg:px-8 py-24 sm:py-32">
+          <div className="mx-auto max-w-4xl text-center mb-12">
+            <p className="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-6xl">
+              Siempre mejorando para dar lo mejor
+            </p>
+          </div>
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+              <div class="mx-auto flex flex-wrap content-center justify-center max-w-xs flex-col gap-y-4 bg-white/60 rounded-3xl px-8 py-4 ring-1 ring-gray-900/10">
+                <dt class="text-base leading-7 text-gray-700">
+                  Prestadoras de servicios de salud
+                </dt>
+                <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  <span class="animate-[counter_3s_ease-out_forwards] tabular-nums [counter-set:_num_var(--num-providers)] before:content-[counter(num)]">
+                    <span class="sr-only">6000</span>
+                  </span>
+                </dd>
+              </div>
+              <div class="mx-auto flex flex-wrap content-center justify-center max-w-xs flex-col gap-y-4 bg-white/60 rounded-3xl px-8 py-4 ring-1 ring-gray-900/10">
+                <dt class="text-base leading-7 text-gray-700">
+                  Programa de prevención y promoción
+                </dt>
+                <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  <span class="animate-[counter_3s_ease-out_forwards] tabular-nums [counter-set:_num_var(--num-pocs)] before:content-[counter(num)]">
+                    <span class="sr-only">13</span>
+                  </span>
+                </dd>
+              </div>
+              <div class="mx-auto flex flex-wrap content-center justify-center max-w-xs flex-col gap-y-4 bg-white/60 rounded-3xl px-8 py-4 ring-1 ring-gray-900/10">
+                <dt class="text-base leading-7 text-gray-700">
+                  Puntos de servicio al cliente
+                </dt>
+                <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  <span class="animate-[counter_3s_ease-out_forwards] tabular-nums [counter-set:_num_var(--num-programs)] before:content-[counter(num)] before:left-[calc(0.4em * var(--n, 1))]">
+                    <span class="sr-only">6</span>
+                  </span>
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div className="mx-auto max-4xl text-center mt-4">
+            <p className="mt-6 text-lg font-medium text-pretty text-gray-600 sm:text-xl/8">
+              Nuestro objetivo es acercanos a nuestros clientes, puedes
+              encontrar más sobre nosotros en nuestra guía médica.
+              <br />
+              <br />
+              <a
+                href={"/guia_medica.pdf"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer rounded-xl bg-blue-700 px-12 py-4 text-md font-pretty text-white shadow-xs hover:bg-blue-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-950"
+                download
+              >
+                Descargar
+              </a>
+            </p>
+          </div>
+        </section>
+
         <section
           id="plans"
-          className="relative isolate px-6 py-24 sm:py-32 lg:px-8"
+          className="relative isolate px-3 py-24 sm:py-32 lg:px-8"
         >
           <div
             aria-hidden="true"
@@ -339,7 +398,7 @@ const IndexPage = () => {
             />
           </div>
           <div className="mx-auto max-w-4xl text-center">
-            <h2 className="text-base/7 font-semibold text-blue-600">Planes</h2>
+            <h2 className="text-base/7 font-semibold text-primary">Planes</h2>
             <p className="mt-2 text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-6xl">
               Elije el plan que más te convenga
             </p>

@@ -158,10 +158,10 @@ const ContactUsPage = () => {
                   Oficina principal
                 </p>
                 <Link
-                  href="tel:8096854620"
+                  href="tel:8096853000"
                   className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
                 >
-                  809.685.4620
+                  809.685.3000
                 </Link>
                 <p className="text-sm font-semibold text-pretty mt-1">
                   Desde el interior

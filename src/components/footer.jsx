@@ -8,9 +8,9 @@ export const Footer = () => {
     <footer className="bg-gray-900">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between md:py-8">
-          <div className="mb-6 md:mb-0">
+          <div className="flex items-center content-center h-[6rem] w-[6rem] mb-6 md:mb-0 bg-white rounded-full">
             <a href={LINKS.homeHero} className="flex items-center">
-              <img src={Logo} className="h-12 me-3" alt="ARS GMS logo" />
+              <img src={Logo} className="h-12 ml-2" alt="ARS GMS logo" />
             </a>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -70,7 +70,7 @@ export const Footer = () => {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a
-                    href="tel:8096854620"
+                    href="tel:8096853000"
                     className="flex flex-row items-center mt-2 hover:text-white"
                   >
                     <svg
@@ -87,7 +87,7 @@ export const Footer = () => {
                         d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
                       />
                     </svg>
-                    809.685.4620
+                    809.685.3000
                   </a>
                 </li>
                 <li className="mb-4">

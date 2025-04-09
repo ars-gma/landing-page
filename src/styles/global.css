@@ -2,6 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+@property --num-providers {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --num-pocs {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --num-programs {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@keyframes counter {
+  from {
+    --num-providers: 0;
+    --num-pocs: 0;
+    --num-programs: 0;
+  }
+  to {
+    --num-providers: 6000;
+    --num-pocs: 6;
+    --num-programs: 13;
+  }
+}
+
 html,
 body {
   font-family: "Lato", sans-serif;
@@ -25,6 +56,10 @@ html {
 
 .animation-sideToSide {
   animation: sideToSide 3s infinite;
+}
+
+.bg-main {
+  background-image: linear-gradient(to right top, #4b9e1e, #009061, #007c8d, #006399, #004682);
 }
 
 @keyframes pulse {

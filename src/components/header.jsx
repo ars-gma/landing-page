@@ -46,7 +46,7 @@ export const Header = () => {
           <div className="flex lg:flex-1">
             <a href="/#home" className="-m-1.5 p-1.5">
               <span className="sr-only">ARS GMA</span>
-              <img alt="" src={Logo} className="h-12 w-auto" />
+              <img alt="" src={Logo} className="h-12 lg:h-[6rem] w-auto" />
             </a>
           </div>
           <div className="flex md:hidden">
@@ -78,7 +78,7 @@ export const Header = () => {
                 key={item.name}
                 href={item.href}
                 className={classNames(
-                  "text-lg font-semibold text-gray-900 hover:text-blue-600",
+                  "text-lg font-semibold text-gray-900 hover:text-primary",
                   index === 0 &&
                     "bg-blue-600 py-2 px-8 border border-solid border-blue-700 text-white rounded-[3rem] hover:bg-blue-700 hover:border-blue-800 hover:text-white"
                 )}
