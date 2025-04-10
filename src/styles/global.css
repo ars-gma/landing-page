@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@property --num-providers {
+@property --num-doctors {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --num-centers {
   syntax: "<integer>";
   initial-value: 0;
   inherits: false;
@@ -14,7 +20,7 @@
   inherits: false;
 }
 
-@property --num-programs {
+@property --num-activities {
   syntax: "<integer>";
   initial-value: 0;
   inherits: false;
@@ -22,14 +28,16 @@
 
 @keyframes counter {
   from {
-    --num-providers: 0;
+    --num-doctors: 0;
+    --num-centers: 0;
     --num-pocs: 0;
-    --num-programs: 0;
+    --num-activities: 0;
   }
   to {
-    --num-providers: 6000;
+    --num-doctors: 4200;
+    --num-centers: 1300;
     --num-pocs: 6;
-    --num-programs: 13;
+    --num-activities: 15;
   }
 }
 

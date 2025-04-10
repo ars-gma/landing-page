@@ -324,39 +324,60 @@ const IndexPage = () => {
 
         <section id="stats" class="px-3 lg:px-8 py-24 sm:py-32">
           <div className="mx-auto max-w-4xl text-center mb-12">
+            <h2 className="text-center text-base/7 font-semibold text-blue-600">
+              Nosotros
+            </h2>
             <p className="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-6xl">
-              Siempre mejorando para dar lo mejor
+              Siempre en busqueda de la excelencia
             </p>
           </div>
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
-              <div class="mx-auto flex flex-wrap content-center justify-center max-w-xs flex-col gap-y-4 bg-white/60 rounded-3xl px-8 py-4 ring-1 ring-gray-900/10">
-                <dt class="text-base leading-7 text-gray-700">
-                  Prestadoras de servicios de salud
+            <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center md:grid-cols-5">
+              <div class="mx-auto flex flex-wrap content-center justify-center max-w-xs flex-col gap-y-1 px-8 py-4">
+                <dt class="text-base text-left leading-7 text-gray-700">
+                  Medicos
                 </dt>
-                <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                  <span class="animate-[counter_3s_ease-out_forwards] tabular-nums [counter-set:_num_var(--num-providers)] before:content-[counter(num)]">
-                    <span class="sr-only">6000</span>
+                <dd class="text-3xl text-left font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  <span class="animate-[counter_3s_ease-out_forwards] tabular-nums [counter-set:_num_var(--num-doctors)] before:content-[counter(num)]">
+                    <span class="sr-only">4200</span>
                   </span>
                 </dd>
               </div>
-              <div class="mx-auto flex flex-wrap content-center justify-center max-w-xs flex-col gap-y-4 bg-white/60 rounded-3xl px-8 py-4 ring-1 ring-gray-900/10">
-                <dt class="text-base leading-7 text-gray-700">
-                  Programa de prevención y promoción
+              <div class="mx-auto flex flex-wrap content-center justify-center max-w-xs flex-col gap-y-1 px-8 py-4">
+                <dt class="text-base text-left leading-7 text-gray-700">
+                  Centros
                 </dt>
-                <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                  <span class="animate-[counter_3s_ease-out_forwards] tabular-nums [counter-set:_num_var(--num-pocs)] before:content-[counter(num)]">
-                    <span class="sr-only">13</span>
+                <dd class="text-3xl text-left font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  <span class="animate-[counter_3s_ease-out_forwards] tabular-nums [counter-set:_num_var(--num-centers)] before:content-[counter(num)]">
+                    <span class="sr-only">1300</span>
                   </span>
                 </dd>
               </div>
-              <div class="mx-auto flex flex-wrap content-center justify-center max-w-xs flex-col gap-y-4 bg-white/60 rounded-3xl px-8 py-4 ring-1 ring-gray-900/10">
-                <dt class="text-base leading-7 text-gray-700">
-                  Puntos de servicio al cliente
+              <div class="mx-auto flex flex-wrap content-center justify-center max-w-xs flex-col gap-y-1 px-8 py-4">
+                <dt class="text-base text-left leading-7 text-gray-700">
+                  Puntos de servicio
                 </dt>
-                <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                  <span class="animate-[counter_3s_ease-out_forwards] tabular-nums [counter-set:_num_var(--num-programs)] before:content-[counter(num)] before:left-[calc(0.4em * var(--n, 1))]">
+                <dd class="text-3xl text-left font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  <span class="animate-[counter_3s_ease-out_forwards] tabular-nums [counter-set:_num_var(--num-pocs)] before:content-[counter(num)] before:left-[calc(0.4em * var(--n, 1))]">
                     <span class="sr-only">6</span>
+                  </span>
+                </dd>
+              </div>
+              <div class="mx-auto flex flex-wrap content-center justify-center max-w-xs flex-col gap-y-1 rounded-3xl px-8 py-4">
+                <dt class="text-base text-left leading-7 text-gray-700">
+                  Atención teléfonica
+                </dt>
+                <dd class="text-3xl text-left font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  <span class="tabular-nums">24/7</span>
+                </dd>
+              </div>
+              <div class="mx-auto flex flex-wrap content-center justify-center max-w-xs flex-col gap-y-1 rounded-3xl px-8 py-4">
+                <dt class="text-base text-left leading-7 text-gray-700">
+                  Actividades de salud
+                </dt>
+                <dd class="text-3xl text-left font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  <span class="animate-[counter_3s_ease-out_forwards] tabular-nums [counter-set:_num_var(--num-activities)] before:content-[counter(num)] before:left-[calc(0.4em * var(--n, 1))]">
+                    <span class="sr-only">15</span>
                   </span>
                 </dd>
               </div>
@@ -365,7 +386,7 @@ const IndexPage = () => {
           <div className="mx-auto max-4xl text-center mt-4">
             <p className="mt-6 text-lg font-medium text-pretty text-gray-600 sm:text-xl/8">
               Nuestro objetivo es acercanos a nuestros clientes, puedes
-              encontrar más sobre nosotros en nuestra guía médica.
+              encontrar más en nuestra guía médica.
               <br />
               <br />
               <a

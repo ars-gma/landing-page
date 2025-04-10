@@ -14,6 +14,7 @@ const ProvidersPage = () => {
   const [list, setList] = useState([]);
   const [types, setTypes] = useState([]);
   const [cities, setCities] = useState([]);
+  const [specialties, setSpecialties] = useState([]);
   const [filterText, setFilterText] = useState([]);
   const [selectedType, setSelectedType] = useState(null);
   const [selectedCity, setSelectedCity] = useState(null);
@@ -23,6 +24,10 @@ const ProvidersPage = () => {
   const [startPagination, setStartPagination] = useState(1);
   const [endPagination, setEndPagination] = useState(PAGINATION);
   const [totalPagination, setTotalPagination] = useState(PAGINATION);
+
+  const onlyOneCity = cities.length === 1;
+  const onlyOneType = types.length === 1;
+  const onlyOneSpecialty = specialties.length === 1;
 
   const providers = unformatProviders.map((item) => ({
     ...item,
@@ -133,6 +138,20 @@ const ProvidersPage = () => {
     setCurrentPage(1);
   };
 
+  const clearFilters = () => {
+    if (!onlyOneCity) {
+      setSelectedCity(null);
+    }
+
+    if (!onlyOneType) {
+      setSelectedType(null);
+    }
+
+    if (!onlyOneSpecialty) {
+      setSelectedSpecialty(null);
+    }
+  };
+
   useEffect(() => {
     if (list?.length === 0 && providers?.length > 0) {
       setList(providers.slice(0, PAGINATION + 1));
@@ -226,7 +245,11 @@ const ProvidersPage = () => {
     if (types.length === 1) {
       setSelectedType(types[0]);
     }
-  }, [cities, types]);
+
+    if (specialties.length === 1) {
+      setSpecialties(specialties[0]);
+    }
+  }, [cities, types, specialties]);
 
   return (
     <Layout>
@@ -270,10 +293,10 @@ const ProvidersPage = () => {
               />
             </div>
           </form>
-          <div className="flex justify-center items-center w-md md:mx-64 lg:mx-128 mb-2">
+          <div className="flex justify-left md:justify-center items-center w-md md:mx-64 lg:mx-128 mb-4">
             <Menu as="div" className="relative inline-block text-left">
               <div>
-                <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50">
+                <MenuButton className="inline-flex h-[3rem] w-full justify-center items-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-md font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50">
                   {selectedType || "Tipo"}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -293,6 +316,7 @@ const ProvidersPage = () => {
               </div>
 
               <MenuItems
+                anchor="bottom end"
                 transition
                 className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
               >
@@ -313,7 +337,7 @@ const ProvidersPage = () => {
             </Menu>
             <Menu as="div" className="relative inline-block text-left ml-3">
               <div>
-                <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50">
+                <MenuButton className="inline-flex h-[3rem] w-full justify-center items-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-md font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50">
                   {selectedCity || "Ciudad"}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -333,6 +357,7 @@ const ProvidersPage = () => {
               </div>
 
               <MenuItems
+                anchor="bottom end"
                 transition
                 className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
               >
@@ -352,11 +377,32 @@ const ProvidersPage = () => {
               </MenuItems>
             </Menu>
             {/* TODO do not display clear if there is a default one */}
-            {/* {(selectedCity || selectedType || selectedType) && (
-              <button class="ml-2 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-                Limpiar filtros
+            {((selectedCity && !onlyOneCity) ||
+              (selectedType && !onlyOneType) ||
+              (selectedSpecialty && !onlyOneSpecialty)) && (
+              <button
+                class="ml-2 w-fit bg-transparent text-red-700 hover:text-red-900 font-semibold py-2 px-4"
+                onClick={clearFilters}
+              >
+                <div className="flex flex-row items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="size-6 mr-2"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    />
+                  </svg>
+                  Limpiar filtros
+                </div>
               </button>
-            )} */}
+            )}
           </div>
           {list.length === 0 ? (
             <div className="flex justify-center mt-2">

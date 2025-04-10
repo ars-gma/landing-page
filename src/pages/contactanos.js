@@ -37,7 +37,7 @@ const ContactUsPage = () => {
   };
   return (
     <Layout>
-      <main className="grid min-h-full place-items-center py-24 px-6 sm:py-32 md:px-[4rem] lg:px-[16rem]">
+      <main className="grid min-h-full place-items-center py-24 px-6 sm:py-32 md:px-[4rem] lg:px-[10rem]">
         <div
           id="alert-error"
           class={`${
@@ -132,8 +132,8 @@ const ContactUsPage = () => {
         <div className="mt-16 md:mt-4 mb-8">
           <h1 className="text-pretty text-5xl font-black">Comunicate</h1>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 h-full w-full">
-          <div className="order-first col-span-3 md:col-span-1 md-col-end-1 h-full mt-8 md:mr-4">
+        <div className="flex flex-row h-full w-full">
+          <div className="h-full w-[45%] mt-8">
             <h1 className="text-balance text-2xl font-semibold">
               Ponte en contacto
             </h1>
@@ -149,38 +149,41 @@ const ContactUsPage = () => {
               </div>
               <div className="mt-3">
                 <p className="text-md font-semibold text-pretty">
-                  Santo Domingo
+                  Distrito Nacional
                 </p>
                 <p className="text-sm font-light italic text-pretty">
-                  Calle A #1, Gazcue
-                </p>
-                <p className="text-sm font-semibold text-pretty mt-1">
-                  Oficina principal
+                  Av. Independencia no. 701, Gazcue
                 </p>
                 <Link
-                  href="tel:8096853000"
+                  href="mailto:info@arsgma.com"
                   className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
                 >
-                  809.685.3000
+                  info@arsgma.com
                 </Link>
-                <p className="text-sm font-semibold text-pretty mt-1">
-                  Desde el interior
-                </p>
-                <Link
-                  href="tel:8092000761"
-                  className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
-                >
-                  809.200.0761
-                </Link>
-              </div>
-              <div className="mt-3">
-                <p className="text-lg font-semibold text-pretty">Soporte</p>
-                <Link
-                  href="mailto:correo@arsgma.com"
-                  className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
-                >
-                  correo@arsgma.com
-                </Link>
+                <div className="grid grid-cols-2">
+                  <div>
+                    <p className="text-sm font-semibold text-pretty mt-1">
+                      Teléfono
+                    </p>
+                    <Link
+                      href="tel:8096853000"
+                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                    >
+                      809.685.3000
+                    </Link>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-pretty mt-1">
+                      Central
+                    </p>
+                    <Link
+                      href="tel:8096854620"
+                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                    >
+                      809.685.4620
+                    </Link>
+                  </div>
+                </div>
               </div>
               <div className="mt-6">
                 <p className="text-lg font-bold text-pretty">
@@ -188,34 +191,200 @@ const ContactUsPage = () => {
                 </p>
               </div>
               <div className="mt-3">
-                <p className="text-md font-semibold text-pretty">Higüey</p>
+                <p className="text-md font-semibold text-pretty">Santiago</p>
                 <p className="text-sm font-light italic text-pretty">
-                  Calle B #2, Matas
+                  Av. 27 de Febrero, Plaza del Paseo, Los Jardines
+                  Metropolitanos
                 </p>
                 <Link
-                  href="tel:8097461488"
+                  href="mailto:santiago@arsgma.com"
                   className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
                 >
-                  809.746.1488
+                  santiago@arsgma.com
                 </Link>
+                <div className="grid grid-cols-2">
+                  <div>
+                    <p className="text-sm font-semibold text-pretty mt-1">
+                      Teléfono
+                    </p>
+                    <Link
+                      href="tel:8098258513"
+                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                    >
+                      809.825.8513{" "}
+                    </Link>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-pretty mt-1">
+                      Central
+                    </p>
+                    <Link
+                      href="tel:8096853000"
+                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                    >
+                      809.685.3000
+                    </Link>{" "}
+                    (Ext. 280)
+                  </div>
+                </div>
+              </div>
+              <div className="mt-3">
+                <p className="text-md font-semibold text-pretty">Higüey</p>
+                <p className="text-sm font-light italic text-pretty">
+                  Calle Libertad esq. Colón, Plaza Brian 2do nivel
+                </p>
+                <Link
+                  href="mailto:higuey@arsgma.com"
+                  className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                >
+                  higuey@arsgma.com
+                </Link>
+                <div className="grid grid-cols-2">
+                  <div>
+                    <p className="text-sm font-semibold text-pretty mt-1">
+                      Teléfono
+                    </p>
+                    <Link
+                      href="tel:8097461488"
+                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                    >
+                      809.746.1488
+                    </Link>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-pretty mt-1">
+                      Central
+                    </p>
+                    <Link
+                      href="tel:8096853000"
+                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                    >
+                      809.685.3000
+                    </Link>{" "}
+                    (Ext. 285)
+                  </div>
+                </div>
+              </div>
+              <div className="mt-3">
+                <p className="text-md font-semibold text-pretty">
+                  San Juan de la Magüana
+                </p>
+                <p className="text-sm font-light italic text-pretty">
+                  Calle Pedro J. Heyaime no. 68, Plaza Wao Gallery 2do nivel
+                </p>
+                <Link
+                  href="mailto:sanjuan@arsgma.com"
+                  className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                >
+                  sanjuan@arsgma.com
+                </Link>
+                <div className="grid grid-cols-2">
+                  <div>
+                    <p className="text-sm font-semibold text-pretty mt-1">
+                      Teléfono
+                    </p>
+                    <Link
+                      href="tel:8095574484"
+                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                    >
+                      809.557.4484{" "}
+                    </Link>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-pretty mt-1">
+                      Central
+                    </p>
+                    <Link
+                      href="tel:8096853000"
+                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                    >
+                      809.685.3000
+                    </Link>{" "}
+                    (Ext. 295)
+                  </div>
+                </div>
               </div>
               <div className="mt-3">
                 <p className="text-md font-semibold text-pretty">
                   San Cristóbal
                 </p>
                 <p className="text-sm font-light italic text-pretty">
-                  Calle C #3, Matas
+                  Calle General Leger esq. Sanchez no. 38 Edif. Guerrero Medina
                 </p>
                 <Link
-                  href="tel:8095278207"
+                  href="mailto:sancristobal@arsgma.com"
                   className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
                 >
-                  809.527.8207
+                  sancristobal@arsgma.com
                 </Link>
+                <div className="grid grid-cols-2">
+                  <div>
+                    <p className="text-sm font-semibold text-pretty mt-1">
+                      Teléfono
+                    </p>
+                    <Link
+                      href="tel:8095278207"
+                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                    >
+                      809.527.8207
+                    </Link>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-pretty mt-1">
+                      Central
+                    </p>
+                    <Link
+                      href="tel:8096853000"
+                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                    >
+                      809.685.3000
+                    </Link>{" "}
+                    (Ext. 290)
+                  </div>
+                </div>
+              </div>
+              <div className="mt-3">
+                <p className="text-md font-semibold text-pretty">
+                  San Francisco de Macoris
+                </p>
+                <p className="text-sm font-light italic text-pretty">
+                  Calle Colón no. 72, Local 201, Plaza Universo
+                </p>
+                <Link
+                  href="mailto:santiago@arsgma.com"
+                  className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                >
+                  santiago@arsgma.com
+                </Link>
+                <div className="grid grid-cols-2">
+                  <div>
+                    <p className="text-sm font-semibold text-pretty mt-1">
+                      Teléfono
+                    </p>
+                    <Link
+                      href="tel:8095883607"
+                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                    >
+                      809.588.3607
+                    </Link>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-pretty mt-1">
+                      Central
+                    </p>
+                    <Link
+                      href="tel:8096853000"
+                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                    >
+                      809.685.3000
+                    </Link>{" "}
+                    (Ext. 275)
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div className="md:col-span-2 md:col-start-2 h-full w-full mt-12 sm:mt-0 md:pl-2 lg:pl-4 md:pr-8 lg:pr-12">
+          <div className="h-full w-[55%] mt-12 sm:mt-0">
             <h1 className="text-balance text-4xl font-black mt-8">
               ¿Aún necesitas ayuda?
             </h1>
