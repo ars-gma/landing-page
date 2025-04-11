@@ -132,8 +132,8 @@ const ContactUsPage = () => {
         <div className="mt-16 md:mt-4 mb-8">
           <h1 className="text-pretty text-5xl font-black">Comunicate</h1>
         </div>
-        <div className="flex flex-row h-full w-full">
-          <div className="h-full w-[45%] mt-8">
+        <div className="flex flex-col sm:flex-row h-full w-full">
+          <div className="h-full w-full sm:w-[45%] mt-8">
             <h1 className="text-balance text-2xl font-semibold">
               Ponte en contacto
             </h1>
@@ -156,7 +156,7 @@ const ContactUsPage = () => {
                 </p>
                 <Link
                   href="mailto:info@arsgma.com"
-                  className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                  className="text-brandBlue border-b-2 border-dotted decoration-brandBlue font-semibold hover:text-blue-700 hover:underline"
                 >
                   info@arsgma.com
                 </Link>
@@ -167,7 +167,7 @@ const ContactUsPage = () => {
                     </p>
                     <Link
                       href="tel:8096853000"
-                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                      className="text-brandBlue border-b-2 border-dotted decoration-brandBlue font-semibold hover:text-blue-700 hover:underline"
                     >
                       809.685.3000
                     </Link>
@@ -178,7 +178,7 @@ const ContactUsPage = () => {
                     </p>
                     <Link
                       href="tel:8096854620"
-                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                      className="text-brandBlue border-b-2 border-dotted decoration-brandBlue font-semibold hover:text-blue-700 hover:underline"
                     >
                       809.685.4620
                     </Link>
@@ -198,7 +198,7 @@ const ContactUsPage = () => {
                 </p>
                 <Link
                   href="mailto:santiago@arsgma.com"
-                  className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                  className="text-brandBlue border-b-2 border-dotted decoration-brandBlue font-semibold hover:text-blue-700 hover:underline"
                 >
                   santiago@arsgma.com
                 </Link>
@@ -209,7 +209,7 @@ const ContactUsPage = () => {
                     </p>
                     <Link
                       href="tel:8098258513"
-                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                      className="text-brandBlue border-b-2 border-dotted decoration-brandBlue font-semibold hover:text-blue-700 hover:underline"
                     >
                       809.825.8513{" "}
                     </Link>
@@ -220,7 +220,7 @@ const ContactUsPage = () => {
                     </p>
                     <Link
                       href="tel:8096853000"
-                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                      className="text-brandBlue border-b-2 border-dotted decoration-brandBlue font-semibold hover:text-blue-700 hover:underline"
                     >
                       809.685.3000
                     </Link>{" "}
@@ -235,7 +235,7 @@ const ContactUsPage = () => {
                 </p>
                 <Link
                   href="mailto:higuey@arsgma.com"
-                  className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                  className="text-brandBlue border-b-2 border-dotted decoration-brandBlue font-semibold hover:text-blue-700 hover:underline"
                 >
                   higuey@arsgma.com
                 </Link>
@@ -246,7 +246,7 @@ const ContactUsPage = () => {
                     </p>
                     <Link
                       href="tel:8097461488"
-                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                      className="text-brandBlue border-b-2 border-dotted decoration-brandBlue font-semibold hover:text-blue-700 hover:underline"
                     >
                       809.746.1488
                     </Link>
@@ -257,7 +257,7 @@ const ContactUsPage = () => {
                     </p>
                     <Link
                       href="tel:8096853000"
-                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                      className="text-brandBlue border-b-2 border-dotted decoration-brandBlue font-semibold hover:text-blue-700 hover:underline"
                     >
                       809.685.3000
                     </Link>{" "}
@@ -274,7 +274,7 @@ const ContactUsPage = () => {
                 </p>
                 <Link
                   href="mailto:sanjuan@arsgma.com"
-                  className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                  className="text-brandBlue border-b-2 border-dotted decoration-brandBlue font-semibold hover:text-blue-700 hover:underline"
                 >
                   sanjuan@arsgma.com
                 </Link>
@@ -285,7 +285,7 @@ const ContactUsPage = () => {
                     </p>
                     <Link
                       href="tel:8095574484"
-                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                      className="text-brandBlue border-b-2 border-dotted decoration-brandBlue font-semibold hover:text-blue-700 hover:underline"
                     >
                       809.557.4484{" "}
                     </Link>
@@ -296,7 +296,7 @@ const ContactUsPage = () => {
                     </p>
                     <Link
                       href="tel:8096853000"
-                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                      className="text-brandBlue border-b-2 border-dotted decoration-brandBlue font-semibold hover:text-blue-700 hover:underline"
                     >
                       809.685.3000
                     </Link>{" "}
@@ -313,7 +313,7 @@ const ContactUsPage = () => {
                 </p>
                 <Link
                   href="mailto:sancristobal@arsgma.com"
-                  className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                  className="text-brandBlue border-b-2 border-dotted decoration-brandBlue font-semibold hover:text-blue-700 hover:underline"
                 >
                   sancristobal@arsgma.com
                 </Link>
@@ -324,7 +324,7 @@ const ContactUsPage = () => {
                     </p>
                     <Link
                       href="tel:8095278207"
-                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                      className="text-brandBlue border-b-2 border-dotted decoration-brandBlue font-semibold hover:text-blue-700 hover:underline"
                     >
                       809.527.8207
                     </Link>
@@ -335,7 +335,7 @@ const ContactUsPage = () => {
                     </p>
                     <Link
                       href="tel:8096853000"
-                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                      className="text-brandBlue border-b-2 border-dotted decoration-brandBlue font-semibold hover:text-blue-700 hover:underline"
                     >
                       809.685.3000
                     </Link>{" "}
@@ -352,7 +352,7 @@ const ContactUsPage = () => {
                 </p>
                 <Link
                   href="mailto:santiago@arsgma.com"
-                  className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                  className="text-brandBlue border-b-2 border-dotted decoration-brandBlue font-semibold hover:text-blue-700 hover:underline"
                 >
                   santiago@arsgma.com
                 </Link>
@@ -363,7 +363,7 @@ const ContactUsPage = () => {
                     </p>
                     <Link
                       href="tel:8095883607"
-                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                      className="text-brandBlue border-b-2 border-dotted decoration-brandBlue font-semibold hover:text-blue-700 hover:underline"
                     >
                       809.588.3607
                     </Link>
@@ -374,7 +374,7 @@ const ContactUsPage = () => {
                     </p>
                     <Link
                       href="tel:8096853000"
-                      className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+                      className="text-brandBlue border-b-2 border-dotted decoration-brandBlue font-semibold hover:text-blue-700 hover:underline"
                     >
                       809.685.3000
                     </Link>{" "}
@@ -384,7 +384,7 @@ const ContactUsPage = () => {
               </div>
             </div>
           </div>
-          <div className="h-full w-[55%] mt-12 sm:mt-0">
+          <div className="h-full w-full sm:w-[55%] mt-12 sm:mt-0">
             <h1 className="text-balance text-4xl font-black mt-8">
               ¿Aún necesitas ayuda?
             </h1>
@@ -404,7 +404,7 @@ const ContactUsPage = () => {
                       name="user_name"
                       type="text"
                       placeholder="Jose Perez"
-                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 border outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600"
+                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 border outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brandBlue"
                     />
                   </div>
                 </div>
@@ -422,7 +422,7 @@ const ContactUsPage = () => {
                       name="user_tax_id"
                       type="text"
                       placeholder="001-1234567-8"
-                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 border outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600"
+                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 border outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brandBlue"
                     />
                   </div>
                 </div>
@@ -440,7 +440,7 @@ const ContactUsPage = () => {
                       name="user_email"
                       type="email"
                       placeholder="jose.perez@gmail.com"
-                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 border outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600"
+                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 border outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brandBlue"
                     />
                   </div>
                 </div>
@@ -452,13 +452,13 @@ const ContactUsPage = () => {
                     Teléfono
                   </label>
                   <div className="mt-2.5">
-                    <div className="flex rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-blue-600">
+                    <div className="flex rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-brandBlue">
                       <input
                         id="phone-number"
                         name="user_phone"
                         type="text"
                         placeholder="8091234567"
-                        className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 border outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600"
+                        className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 border outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brandBlue"
                       />
                     </div>
                   </div>
@@ -477,7 +477,7 @@ const ContactUsPage = () => {
                       name="user_message"
                       rows={4}
                       placeholder="Dejanos saber tus dudas o preguntas."
-                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 border outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600"
+                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 border outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brandBlue"
                     />
                   </div>
                 </div>
@@ -486,7 +486,7 @@ const ContactUsPage = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="block rounded-md bg-blue-600 px-12 py-4 text-center text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                  className="block rounded-md bg-brandBlue px-12 py-4 text-center text-sm font-semibold text-white shadow-xs hover:bg-blue-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                 >
                   Hablemos
                 </button>

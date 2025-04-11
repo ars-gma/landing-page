@@ -5,7 +5,7 @@ import { LINKS } from "./header";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-900">
+    <footer className="bg-brandBlue">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between md:py-8">
           <div className="flex items-center content-center h-[6rem] w-[6rem] mb-6 md:mb-0 bg-white rounded-full">
@@ -15,12 +15,12 @@ export const Footer = () => {
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-white uppercase">
                 Recursos
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-brandWhite font-medium">
                 <li className="mb-4">
-                  <a href={LINKS.register} className="hover:text-white">
+                  <a href={LINKS.services} className="hover:text-white">
                     Afíliate
                   </a>
                 </li>
@@ -64,10 +64,10 @@ export const Footer = () => {
               </ul>
             </div>
             <div className="w-xs md:w-auto">
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-white uppercase">
                 Contactanos
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-brandWhite font-medium">
                 <li className="mb-4">
                   <a
                     href="tel:8096853000"
@@ -144,10 +144,10 @@ export const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-white uppercase">
                 Legal
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-brandWhite font-medium">
                 <li className="mb-4">
                   <a
                     href={"/ley87-01.pdf"}
@@ -207,9 +207,9 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <hr className="my-6 border-brandWhite sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center">
+          <span className="text-sm text-brandWhite sm:text-center">
             © 2009 <a href={LINKS.home}>ARS GMA</a>. Todos los Derechos
             Reservados.
           </span>
@@ -218,7 +218,7 @@ export const Footer = () => {
               href="https://www.facebook.com/arsgma"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-white ms-5"
+              className="text-brandWhite hover:text-white ms-5"
             >
               <svg
                 className="w-4 h-4"
@@ -239,7 +239,7 @@ export const Footer = () => {
               href="https://x.com/arsgma"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-white ms-5"
+              className="text-brandWhite hover:text-white ms-5"
             >
               <svg
                 className="w-4 h-4"
@@ -260,7 +260,7 @@ export const Footer = () => {
               href="https://www.instagram.com/arsgmard"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-white ms-5"
+              className="text-brandWhite hover:text-white ms-5"
             >
               <svg
                 className="w-4 h-4"

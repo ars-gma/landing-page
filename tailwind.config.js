@@ -20,8 +20,9 @@ module.exports = {
           "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1087%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c67 C 48%2c92.4 144%2c201.4 240%2c194 C 336%2c186.6 384%2c18.2 480%2c30 C 576%2c41.8 624%2c253.4 720%2c253 C 816%2c252.6 864%2c26.6 960%2c28 C 1056%2c29.4 1104%2c248.8 1200%2c260 C 1296%2c271.2 1392%2c119.2 1440%2c84L1440 560L0 560z' fill='rgba(0%2c 70%2c 130%2c 0.6)'%3e%3c/path%3e%3cpath d='M 0%2c555 C 28.8%2c518.6 86.4%2c372.6 144%2c373 C 201.6%2c373.4 230.4%2c568 288%2c557 C 345.6%2c546 374.4%2c339.8 432%2c318 C 489.6%2c296.2 518.4%2c430.2 576%2c448 C 633.6%2c465.8 662.4%2c402.2 720%2c407 C 777.6%2c411.8 806.4%2c489.2 864%2c472 C 921.6%2c454.8 950.4%2c316 1008%2c321 C 1065.6%2c326 1094.4%2c483.6 1152%2c497 C 1209.6%2c510.4 1238.4%2c382.6 1296%2c388 C 1353.6%2c393.4 1411.2%2c496.8 1440%2c524L1440 560L0 560z' fill='rgba(1%2c 88%2c 163%2c 0.56)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1087'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e\")",
       },
       colors: {
-        primary: "#004682",
-        secondary: "#4B9E1E",
+        brandBlue: "#004682",
+        brandGreen: "#4B9E1E",
+        brandWhite: "#DFDFDF",
       },
     },
   },

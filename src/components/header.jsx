@@ -8,29 +8,30 @@ import { classNames } from "../utils/helpers";
 export const LINKS = {
   home: "/",
   homeHero: "/#home",
-  register: "/afiliate",
-  providers: "/prestadoras",
+  services: "#",
+  providers: "/prestadores",
   plans: "/#plans",
   contactUs: "/contactanos",
   faqs: "/preguntas-frecuentes",
 };
 
 const navigation = [
-  { name: "Afíliate", href: LINKS.register },
-  { name: "Prestadoras", href: LINKS.providers },
+  { name: "Servicios", href: LINKS.services },
+  { name: "Prestadores", href: LINKS.providers },
   { name: "Planes", href: LINKS.plans },
   { name: "Contactanos", href: LINKS.contactUs },
 ];
 
 const mobileNavigation = [
   ...navigation,
-  { name: "Preguntas frecuentes", href: LINKS.faqs }
-]
+  { name: "Preguntas frecuentes", href: LINKS.faqs },
+];
 
 export const Header = () => {
   const location = useLocation();
   const isHomeDisplaying = location.pathname === LINKS.home;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isModalVisible, setModalVisible] = useState(false);
 
   return (
     <div className="">
@@ -77,15 +78,53 @@ export const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
+                onClick={(e) => {
+                  if (index === 0) {
+                    e.preventDefault();
+                    setModalVisible(!isModalVisible);
+                  }
+                }}
                 className={classNames(
-                  "text-lg font-semibold text-gray-900 hover:text-primary",
-                  index === 0 &&
-                    "bg-blue-600 py-2 px-8 border border-solid border-blue-700 text-white rounded-[3rem] hover:bg-blue-700 hover:border-blue-800 hover:text-white"
+                  "text-lg font-semibold text-gray-900 animate-link"
+                  // index === 0 &&
+                  //   "bg-blue-600 py-2 px-8 border border-solid border-blue-700 text-white rounded-[3rem] hover:bg-blue-700 hover:border-blue-800 hover:text-white"
                 )}
               >
                 {item.name}
               </a>
             ))}
+            {isModalVisible && (
+              <div
+                id="mega-menu-dropdown"
+                class="absolute z-10 grid w-auto grid-cols-1 text-sm bg-white border border-gray-100 rounded-lg shadow-md top-[4.2rem] lg:top-[6.2rem] right-[20rem] lg:right-[20.5rem]"
+              >
+                <div class="p-4 pb-0 text-gray-900 md:pb-4">
+                  <ul
+                    class="space-y-4"
+                    aria-labelledby="mega-menu-dropdown-button"
+                  >
+                    <li className="">
+                      <a href="#" class="block p-3 rounded-lg hover:bg-gray-50">
+                        <div class="font-semibold">Afiliación de Titulares</div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">
+                          Registración para el titular de la cuenta.
+                        </span>
+                      </a>
+                    </li>
+                    <li className="">
+                      <a href="#" class="block p-3 rounded-lg hover:bg-gray-50">
+                        <div class="font-semibold">
+                          Afiliación de Dependientes
+                        </div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">
+                          Agregar familiares a tu plan.
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
         </nav>
         <Dialog
