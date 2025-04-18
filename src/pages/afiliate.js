@@ -51,7 +51,7 @@ const features = [
         Contactando directamente con nuestro{" "}
         <Link
           href={LINKS.contactUs}
-          className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+          className="text-brandBlue border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
         >
           Departamento de Servicios al Cliente
         </Link>{" "}

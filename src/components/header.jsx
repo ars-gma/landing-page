@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { useLocation } from "@reach/router";
 
 import Logo from "../images/logo.png";
 import { classNames } from "../utils/helpers";
@@ -13,6 +12,7 @@ export const LINKS = {
   plans: "/#plans",
   contactUs: "/contactanos",
   faqs: "/preguntas-frecuentes",
+  affiliate: "/afiliate",
 };
 
 const navigation = [
@@ -23,27 +23,22 @@ const navigation = [
 ];
 
 const mobileNavigation = [
-  ...navigation,
+  { name: "Afiliación de Titulares", href: LINKS.affiliate },
+  { name: "Afiliación de Dependientes", href: LINKS.affiliate },
+  { name: "Prestadores", href: LINKS.providers },
+  { name: "Planes", href: LINKS.plans },
+  { name: "Contactanos", href: LINKS.contactUs },
   { name: "Preguntas frecuentes", href: LINKS.faqs },
 ];
 
 export const Header = () => {
-  const location = useLocation();
-  const isHomeDisplaying = location.pathname === LINKS.home;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isModalVisible, setModalVisible] = useState(false);
 
   return (
     <div className="">
-      <header
-        className={`${
-          isHomeDisplaying ? "fixed" : "absolute"
-        } bg-white border inset-x-0 top-0 z-50 max-w-[95%] sm:max-w-[85%] m-auto mt-[1rem] rounded-[3rem] shadow-md`}
-      >
-        <nav
-          aria-label="Global"
-          className="flex items-center justify-between p-6 lg:px-8"
-        >
+      <header className="fixed bg-white border inset-x-0 top-0 z-50 max-w shadow-md">
+        <nav className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
             <a href="/#home" className="-m-1.5 p-1.5">
               <span className="sr-only">ARS GMA</span>
@@ -104,7 +99,7 @@ export const Header = () => {
                     aria-labelledby="mega-menu-dropdown-button"
                   >
                     <li className="">
-                      <a href="#" class="block p-3 rounded-lg hover:bg-gray-50">
+                      <a href={LINKS.affiliate} class="block p-3 rounded-lg hover:bg-gray-50">
                         <div class="font-semibold">Afiliación de Titulares</div>
                         <span class="text-sm text-gray-500 dark:text-gray-400">
                           Registración para el titular de la cuenta.
@@ -112,7 +107,7 @@ export const Header = () => {
                       </a>
                     </li>
                     <li className="">
-                      <a href="#" class="block p-3 rounded-lg hover:bg-gray-50">
+                      <a href={LINKS.affiliate} class="block p-3 rounded-lg hover:bg-gray-50">
                         <div class="font-semibold">
                           Afiliación de Dependientes
                         </div>

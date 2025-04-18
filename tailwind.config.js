@@ -23,6 +23,7 @@ module.exports = {
         brandBlue: "#004682",
         brandGreen: "#4B9E1E",
         brandWhite: "#DFDFDF",
+        background1: "#153458",
       },
     },
   },

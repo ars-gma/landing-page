@@ -14,7 +14,7 @@ export const ExternalLink = ({
       onClick={onClick}
       target={target}
       className={classNames(
-        "cursor-pointer text-blue-500 hover:text-blue-700 hover:underline decoration-blue-600",
+        "cursor-pointer text-brandBlue hover:text-blue-700 hover:underline decoration-blue-600",
         className
       )}
       rel="noopener noreferrer"

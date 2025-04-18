@@ -507,7 +507,7 @@ const ProvidersPage = () => {
                       {currentPage !== 1 && (
                         <Link
                           onClick={onPreviousClick}
-                          className="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+                          className="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-200 focus:z-20 focus:outline-offset-0"
                         >
                           <span className="sr-only">Anterior</span>
                           <svg
@@ -532,8 +532,8 @@ const ProvidersPage = () => {
                           aria-current={currentPage === index + 1 && "page"}
                           className={classNames(
                             currentPage === index + 1 &&
-                              "bg-blue-600 text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600",
-                            "relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+                              "bg-brandBlue text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 hover:bg-brandBlue",
+                            "relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-200 focus:z-20 focus:outline-offset-0"
                           )}
                         >
                           {index + 1}
@@ -543,7 +543,7 @@ const ProvidersPage = () => {
                         parseInt(Math.ceil(totalPagination / PAGINATION)) && (
                         <Link
                           onClick={onNextClick}
-                          className="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+                          className="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-200 focus:z-20 focus:outline-offset-0"
                         >
                           <span className="sr-only">Siguiente</span>
                           <svg

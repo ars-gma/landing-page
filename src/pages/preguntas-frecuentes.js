@@ -17,7 +17,7 @@ const FaqsPage = () => {
             Si no encuentras la respuesta que necesitas, no dudes en{" "}
             <Link
               href={LINKS.contactUs}
-              className="text-blue-500 border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
+              className="text-brandBlue border-b-2 border-dotted decoration-blue-600 font-semibold hover:text-blue-700 hover:underline"
             >
               comunicarte con nosotros
             </Link>
