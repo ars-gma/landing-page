@@ -11,8 +11,8 @@ export const HeroSection = () => {
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 h-full w-full sm:px-[4rem] lg:px-32 py-32 sm:pt-[2rem] sm:pb-[12rem] lg:pt-[2rem] lg:pb-[14rem]">
         <div className="mx-auto max-w-2xl">
-          <h1 className="text-5xl font-bold tracking-tight text-balance sm:text-8xl font-black">
-            Protegiendo tu salud
+          <h1 className="text-5xl font-extrabold tracking-tight text-balance sm:text-8xl">
+            <span className="text-brandGreen font-black">Cuidamos</span> tu salud
           </h1>
           <p className="mt-8 text-lg font-medium text-pretty text-gray-500">
             En ARS GMA, contamos con una amplia Red de Prestadoras de Servicios

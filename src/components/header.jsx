@@ -38,11 +38,11 @@ export const Header = () => {
   return (
     <div className="">
       <header className="fixed bg-white border inset-x-0 top-0 z-50 max-w shadow-md">
-        <nav className="flex items-center justify-between p-6 lg:px-8">
+        <nav className="flex items-center justify-between p-6 sm:p-[1rem] lg:px-8">
           <div className="flex lg:flex-1">
             <a href="/#home" className="-m-1.5 p-1.5">
               <span className="sr-only">ARS GMA</span>
-              <img alt="" src={Logo} className="h-12 lg:h-[6rem] w-auto" />
+              <img alt="" src={Logo} className="h-12 lg:h-[5rem] w-auto" />
             </a>
           </div>
           <div className="flex md:hidden">
