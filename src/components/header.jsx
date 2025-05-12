@@ -8,25 +8,31 @@ export const LINKS = {
   home: "/",
   homeHero: "/#home",
   services: "#",
-  providers: "/prestadores",
+  aboutUs: "/nosotros",
+  providers: "/directorio-medico",
   plans: "/#plans",
   contactUs: "/contactanos",
   faqs: "/preguntas-frecuentes",
   affiliate: "/afiliate",
+  signIn: "/iniciar-sesion",
 };
 
 const navigation = [
   { name: "Servicios", href: LINKS.services },
-  { name: "Prestadores", href: LINKS.providers },
+  { name: "Nosotros", href: LINKS.aboutUs },
+  { name: "Directorio médico", href: LINKS.providers },
   { name: "Planes", href: LINKS.plans },
   { name: "Contactanos", href: LINKS.contactUs },
+  { name: "Ingresar", href: LINKS.signIn }
 ];
 
 const mobileNavigation = [
+  { name: "Ingresar", href: LINKS.signIn },
   { name: "Afiliación de Titulares", href: LINKS.affiliate },
   { name: "Afiliación de Dependientes", href: LINKS.affiliate },
-  { name: "Prestadores", href: LINKS.providers },
+  { name: "Directorio médico", href: LINKS.providers },
   { name: "Planes", href: LINKS.plans },
+  { name: "Nosotros", href: LINKS.aboutUs },
   { name: "Contactanos", href: LINKS.contactUs },
   { name: "Preguntas frecuentes", href: LINKS.faqs },
 ];

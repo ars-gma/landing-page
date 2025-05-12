@@ -1,6 +1,7 @@
 import React from "react";
 
 import Logo from "../images/logo.png";
+import AdimarsLogo from "../images/adimars.jpeg";
 import { LINKS } from "./header";
 
 export const Footer = () => {
@@ -8,10 +9,12 @@ export const Footer = () => {
     <footer className="bg-brandBlue">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between md:py-8">
-          <div className="flex items-center content-center h-[6rem] w-[6rem] mb-6 md:mb-0 bg-white rounded-full">
-            <a href={LINKS.homeHero} className="flex items-center">
-              <img src={Logo} className="h-12 ml-2" alt="ARS GMS logo" />
-            </a>
+          <div>
+            <div className="flex items-center content-center h-[6rem] w-[6rem] mb-6 md:mb-0 bg-white rounded-full">
+              <a href={LINKS.homeHero} className="flex items-center">
+                <img src={Logo} className="h-12 ml-2" alt="ARS GMS logo" />
+              </a>
+            </div>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
@@ -19,27 +22,27 @@ export const Footer = () => {
                 Recursos
               </h2>
               <ul className="text-brandWhite font-medium">
-                <li className="mb-4">
+                <li className="mb-2">
                   <a href={LINKS.services} className="hover:text-white">
                     Afíliate
                   </a>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2">
                   <a href={LINKS.plans} className="hover:text-white">
                     Planes
                   </a>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2">
                   <a href={LINKS.providers} className="hover:text-white">
                     Prestadoras
                   </a>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2">
                   <a href={LINKS.faqs} className="hover:text-white">
                     Preguntas frecuentes
                   </a>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2">
                   <a
                     href={"/guia_medica.pdf"}
                     target="_blank"
@@ -68,7 +71,7 @@ export const Footer = () => {
                 Contactanos
               </h2>
               <ul className="text-brandWhite font-medium">
-                <li className="mb-4">
+                <li className="mb-2">
                   <a
                     href="tel:8096853000"
                     className="flex flex-row items-center mt-2 hover:text-white"
@@ -90,7 +93,7 @@ export const Footer = () => {
                     809.685.3000
                   </a>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2">
                   <a
                     href="mailto:info@arsgma.com?subject=ARS GMA"
                     className="flex flex-row items-center mt-2 hover:text-white"
@@ -148,7 +151,7 @@ export const Footer = () => {
                 Legal
               </h2>
               <ul className="text-brandWhite font-medium">
-                <li className="mb-4">
+                <li className="mb-2">
                   <a
                     href={"/ley87-01.pdf"}
                     target="_blank"
@@ -159,7 +162,7 @@ export const Footer = () => {
                     Sistema Dominicano de Seguridad Social
                   </a>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2">
                   <a
                     href={"/ley42-00.pdf"}
                     target="_blank"
@@ -170,7 +173,7 @@ export const Footer = () => {
                     Ley General Sobre la Discapacidad
                   </a>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2">
                   <a
                     href={"/ley50-88.pdf"}
                     target="_blank"
@@ -181,7 +184,7 @@ export const Footer = () => {
                     Ley Sobre Drogas y Sustancias Controladas
                   </a>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2">
                   <a
                     href={"/ley42-01.pdf"}
                     target="_blank"
@@ -213,6 +216,9 @@ export const Footer = () => {
             © 2009 <a href={LINKS.home}>ARS GMA</a>. Todos los Derechos
             Reservados.
           </span>
+              <div className="bg-white p-2 rounded-2xl">
+                <img src={AdimarsLogo} className="h-10" alt="Adimars logo" />
+              </div>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             <a
               href="https://www.facebook.com/arsgma"

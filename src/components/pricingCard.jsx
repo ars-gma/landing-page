@@ -26,7 +26,7 @@ export const PricingCard = ({ data, index }) => {
       >
         {data.name}
       </h3>
-      <p className="mt-4 flex items-baseline gap-x-2">
+      {/* <p className="mt-4 flex items-baseline gap-x-2">
         <span
           className={classNames(
             data.featured ? "text-white" : "text-gray-900",
@@ -43,7 +43,7 @@ export const PricingCard = ({ data, index }) => {
         >
           /mes
         </span>
-      </p>
+      </p> */}
       <p
         className={classNames(
           data.featured ? "text-gray-300" : "text-gray-600",

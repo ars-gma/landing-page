@@ -576,5 +576,5 @@ const ProvidersPage = () => {
 export default ProvidersPage;
 
 export const Head = () => (
-  <Seo title="ARS GMA - Tu salud protegida | Prestadores" />
+  <Seo title="ARS GMA - Tu salud protegida | Directorio médico" />
 );

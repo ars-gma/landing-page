@@ -8,6 +8,7 @@ import { StatsSection } from "../components/home/stats";
 import { PlansSection } from "../components/home/plans";
 import { HealthSection } from "../components/home/health";
 import { FaqsSection } from "../components/home/faqs";
+import { BlogSection } from "../components/home/blog";
 import Logo from "../images/logo.png";
 
 const basicTiers = [
@@ -261,6 +262,7 @@ const IndexPage = () => {
         <StatsSection />
         <PlansSection data={tabsData} />
         <HealthSection />
+        <BlogSection />
         <FaqsSection />
       </main>
     </Layout>
