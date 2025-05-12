@@ -13,6 +13,42 @@ const AboutUsPage = () => {
         <div className="grid pt-8 text-left md:gap-4 md:grid-cols-2">
           <div>
             <h3 className="text-pretty text-xl font-semibold mb-4">
+              Nuestra historia
+            </h3>
+            <p className="text-pretty text-md text-gray-500 mb-12">
+              Somos una empresa dedicada a la administración de planes de salud,
+              creada el 12 de Octubre del año 1967, pionera en esta
+              especialidad. Contamos con una red de proveedores de servicios
+              salud (PSS) a nivel nacional, adecuada a los nuevos tiempos.
+              <br />
+              <br />
+              Señalando de sobremanera la Clínica Gómez Patiño por ser parte de
+              nuestro grupo, además mencionando nuestra gran gama de Centros de
+              Atención Primaria, Hospitales, Policlínicas, Centro de
+              Diagnósticos, Servicios de Ambulancia, Farmacias, Medios
+              odontológicos, cobertura de enfermedades catastróficas, Centro de
+              Fisioterapia y rehabilitación, Laboratorio, entre otros.
+              Mencionando también nuestros centros de Servicio al Cliente en
+              Santo Domingo, San Cristóbal e Higuey.
+              <br />
+              <br />
+              ARS GMA es un concepto que define nuestro sistema de salud
+              personal, cuyo objetivo consiste en mejorar el bienestar de
+              nuestros asegurados mediante una relación basada en el servicio y
+              satisfacción de sus demandas.
+              <br />
+              <br />
+              Nuestra compañía ofrece un servicio de calidad exclusivo, creado a
+              la medida de nuestros clientes cada vez más exigente, que apuesta
+              por coberturas amplias, originales y flexibles, un acceso a la
+              asistencia directa, inmediato y sin burocracia, uno de los cuadros
+              médicos más amplios y prestigiosos en el país, además los
+              servicios más novedosos, enfocados a la salud y a un mejor
+              conocimiento de la prevención, como el que destacamos en el
+              programa de “Prevención y Promoción de la Salud”.
+              <br />
+            </p>
+            <h3 className="text-pretty text-xl font-semibold mb-4">
               Nuestra visión
             </h3>
             <p className="text-pretty text-md text-gray-500 mb-12">
@@ -71,44 +107,6 @@ const AboutUsPage = () => {
               />
             </div>
           </div>
-        </div>
-        <div className="mt-12">
-          <h3 className="text-pretty text-xl font-semibold mb-4">
-            Nuestra historia
-          </h3>
-          <p className="text-pretty text-md text-gray-500">
-            Somos una empresa dedicada a la administración de planes de salud,
-            creada el 12 de Octubre del año 1967, pionera en esta especialidad.
-            Contamos con una red de proveedores de servicios salud (PSS) a nivel
-            nacional, adecuada a los nuevos tiempos.
-            <br />
-            <br />
-            Señalando de sobremanera la Clínica Gómez Patiño por ser parte de
-            nuestro grupo, además mencionando nuestra gran gama de Centros de
-            Atención Primaria, Hospitales, Policlínicas, Centro de Diagnósticos,
-            Servicios de Ambulancia, Farmacias, Medios odontológicos, cobertura
-            de enfermedades catastróficas, Centro de Fisioterapia y
-            rehabilitación, Laboratorio, entre otros. Mencionando también
-            nuestros centros de Servicio al Cliente en Santo Domingo, San
-            Cristóbal e Higuey.
-            <br />
-            <br />
-            ARS GMA es un concepto que define nuestro sistema de salud personal,
-            cuyo objetivo consiste en mejorar el bienestar de nuestros
-            asegurados mediante una relación basada en el servicio y
-            satisfacción de sus demandas.
-            <br />
-            <br />
-            Nuestra compañía ofrece un servicio de calidad exclusivo, creado a
-            la medida de nuestros clientes cada vez más exigente, que apuesta
-            por coberturas amplias, originales y flexibles, un acceso a la
-            asistencia directa, inmediato y sin burocracia, uno de los cuadros
-            médicos más amplios y prestigiosos en el país, además los servicios
-            más novedosos, enfocados a la salud y a un mejor conocimiento de la
-            prevención, como el que destacamos en el programa de “Prevención y
-            Promoción de la Salud”.
-            <br />
-          </p>
         </div>
       </main>
     </Layout>

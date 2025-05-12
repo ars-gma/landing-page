@@ -97,7 +97,7 @@ export const Header = () => {
             {isModalVisible && (
               <div
                 id="mega-menu-dropdown"
-                class="absolute z-10 grid w-auto grid-cols-1 text-sm bg-white border border-gray-100 rounded-lg shadow-md top-[4.2rem] lg:top-[6.2rem] right-[20rem] lg:right-[20.5rem]"
+                class="absolute z-10 grid w-auto grid-cols-1 text-sm bg-white border border-gray-100 rounded-lg shadow-md top-[4.2rem] lg:top-[6.2rem] right-[37rem] lg:right-[37.5rem]"
               >
                 <div class="p-4 pb-0 text-gray-900 md:pb-4">
                   <ul
